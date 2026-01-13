@@ -6,7 +6,6 @@
 Difracción v5 (refine pass) para IA_m
 ====================================
 
-Novedad:
 - Si el equilibrio NO es estable (ratio top1/top2 bajo), aplica un "refine pass":
   re-calcula el equilibrio usando filtro por ejes derivados del equilibrio top1 provisional (eq0).
   Esto suele eliminar contaminación (drift) cuando los polos no comparten axes.
@@ -20,6 +19,8 @@ Incluye:
 Ejemplos:
   python3 test5.py --json red_fractal.json --a "viscosidad cinemática" --b "viscosidad dinámica" --sintesis --exclude_auto_dualidad --refine
   python3 test5.py --json red_fractal.json --a "número negativo" --b "signo menos" --sintesis --exclude_auto_dualidad --reject_sintesis_if_polo
+  python3 audit.py --json data/red_fractal_sample.json --a "pasado" --b "futuro" --modo estructura
+  python3 audit.py --json data/red_fractal_sample.json --a "izquierda" --b "derecha" --modo estructura
 """
 
 import json
@@ -27,10 +28,16 @@ import sys
 import argparse
 import networkx as nx
 
-EXCLUIR_NODOS_DEFAULT = {
-    "arriba", "abajo", "izquierda", "derecha", "delante", "detrás", "detras", "centro focal",
-    "pasado", "presente", "futuro",
+# Default exclusions: only meta/internal nodes (safe for general use)
+EXCLUIR_META_DEFAULT = {
     "ia_m", "subconsciente", "subconsciente_semantico",
+}
+
+# Optional "skeleton" nodes: useful to suppress hubs, but they are ALSO valid equilibria in axis tests
+EXCLUIR_SKELETON_DEFAULT = {
+    "arriba", "abajo", "izquierda", "derecha", "delante", "detrás", "detras",
+    "pasado", "presente", "futuro",
+    "centro focal",
 }
 
 
@@ -254,9 +261,11 @@ def buscar_equilibrios(
     *, alpha=0.85, modo="estructura", lambda_balance=0.6,
     excluir_tipos=("emergente", "sintesis"),
     usar_filtro_axis=True, axes_filtro=None,
+    excluir_nodos=None,
     exclude_auto_dualidad=False,
     top_k=40,
 ):
+
     a = resolve_node(G, a)
     b = resolve_node(G, b)
 
@@ -266,12 +275,14 @@ def buscar_equilibrios(
 
     pa = ppr(H, a, alpha=alpha)
     pb = ppr(H, b, alpha=alpha)
+    excluir_set = {str(x).lower() for x in (excluir_nodos or set())}
 
     results = []
     for n in H.nodes():
         if n in (a, b):
             continue
-        if str(n).lower() in {x.lower() for x in EXCLUIR_NODOS_DEFAULT}:
+        #if str(n).lower() in {x.lower() for x in EXCLUIR_NODOS_DEFAULT}:
+        if str(n).lower() in excluir_set:
             continue
         t = tipo_nodo(G, n)
         if t in set(excluir_tipos):
@@ -292,11 +303,11 @@ def buscar_equilibrios(
     results.sort(key=lambda x: x[1], reverse=True)
     return results[:top_k]
 
-
 def buscar_sintesis(
     G, a, b, eq,
     *, alpha=0.85, modo="estructura", lambda_balance=0.5,
     usar_filtro_axis=True, axes_filtro=None,
+    excluir_nodos=None,
     exclude_auto_dualidad=False,
     top_k=20,
 ):
@@ -312,12 +323,15 @@ def buscar_sintesis(
     pa = ppr(H, a, alpha=alpha)
     pb = ppr(H, b, alpha=alpha)
     pe = ppr(H, eq, alpha=alpha)
+    excluir_set = {str(x).lower() for x in (excluir_nodos or set())}
+
 
     results = []
     for n in H.nodes():
         if n in (a, b, eq):
             continue
-        if str(n).lower() in {x.lower() for x in EXCLUIR_NODOS_DEFAULT}:
+        #if str(n).lower() in {x.lower() for x in EXCLUIR_NODOS_DEFAULT}:
+        if str(n).lower() in excluir_set:
             continue
 
         shared_axes = []
@@ -409,10 +423,29 @@ def main():
     ap.add_argument("--reject_sintesis_if_polo", action="store_true")
     ap.add_argument("--refine", action="store_true", help="Activa refine pass si equilibrio NO estable")
     ap.add_argument("--strict_axis", action="store_true", help="Si A∩B es vacío, aborta (NO AUDITABLE) salvo que refine produzca ejes válidos.")
-     
-    
+    ap.add_argument("--exclude_skeleton", action="store_true", help="Exclude skeleton nodes (directions/time primitives/centro focal). Off by default.")
+    ap.add_argument("--exclude", default="", help="Comma-separated list of node names to exclude (applied to both equilibrium and synthesis).")
+    ap.add_argument("--exclude_syn", default="", help="Comma-separated list to exclude ONLY for synthesis (not equilibrium).")
+  
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
+
+    def _parse_csv(s: str) -> set:
+        if not s:
+            return set()
+        return {x.strip().lower() for x in s.split(",") if x.strip()}
+
+    exclude_common = set(EXCLUIR_META_DEFAULT)
+
+    # Optional skeleton suppression
+    if args.exclude_skeleton:
+        exclude_common |= {x.lower() for x in EXCLUIR_SKELETON_DEFAULT}
+
+    # User-provided exclusions (common)
+    exclude_common |= _parse_csv(args.exclude)
+    
+    # Synthesis-only exclusions (extra)
+    exclude_syn_only = _parse_csv(args.exclude_syn)
 
     G = cargar_red(args.json)
     a = resolve_node(G, args.a)
@@ -455,6 +488,7 @@ def main():
         lambda_balance=args.lambda_balance,
         usar_filtro_axis=usar_filtro_axis,
         axes_filtro=axes_filtro_1,
+        excluir_nodos=exclude_common,
         exclude_auto_dualidad=args.exclude_auto_dualidad,
         top_k=max(40, args.top),
     )
@@ -543,6 +577,7 @@ def main():
                 lambda_balance=args.lambda_balance,
                 usar_filtro_axis=True,          # en refine, forzamos filtro
                 axes_filtro=axes_filtro_2,
+                excluir_nodos=exclude_common,
                 exclude_auto_dualidad=args.exclude_auto_dualidad,
                 top_k=max(40, args.top),
             )
@@ -615,6 +650,7 @@ def main():
             lambda_balance=0.5,
             usar_filtro_axis=usar_filtro_axis,
             axes_filtro=axes_filtro_s,
+            excluir_nodos=(exclude_common | exclude_syn_only),
             exclude_auto_dualidad=args.exclude_auto_dualidad,
             top_k=20,
         )
