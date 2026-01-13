@@ -178,6 +178,12 @@ All results above use structure-only propagation (--modo estructura).
 When no shared axes exist, results are explicitly reported as UNCONSTRAINED with LOW confidence.
 The --strict_axis flag enforces formal auditability and prevents unconstrained equilibria from being reported as valid.
 
+### Exclusion policy (important)
+By default, the auditor excludes only internal/meta nodes (e.g., `ia_m`, `subconsciente`) to prevent trivial hubs.
+Skeleton nodes such as spatial directions (`izquierda`, `derecha`, …), temporal primitives (`pasado`, `presente`, `futuro`) and `centro focal` are **NOT** excluded by default because they are valid equilibria in canonical axis tests.
+To suppress these skeleton nodes, enable:
+python3 audit.py --exclude_skeleton ...
+
 📦 License
 Apache License 2.0
 Chosen to encourage open research, reproducibility, and safe industrial adoption while protecting authorship and patent rights.
