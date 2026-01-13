@@ -6,6 +6,7 @@
 Difracción v5 (refine pass) para IA_m
 ====================================
 
+Novedad:
 - Si el equilibrio NO es estable (ratio top1/top2 bajo), aplica un "refine pass":
   re-calcula el equilibrio usando filtro por ejes derivados del equilibrio top1 provisional (eq0).
   Esto suele eliminar contaminación (drift) cuando los polos no comparten axes.
@@ -19,8 +20,6 @@ Incluye:
 Ejemplos:
   python3 test5.py --json red_fractal.json --a "viscosidad cinemática" --b "viscosidad dinámica" --sintesis --exclude_auto_dualidad --refine
   python3 test5.py --json red_fractal.json --a "número negativo" --b "signo menos" --sintesis --exclude_auto_dualidad --reject_sintesis_if_polo
-  python3 audit.py --json data/red_fractal_sample.json --a "pasado" --b "futuro" --modo estructura
-  python3 audit.py --json data/red_fractal_sample.json --a "izquierda" --b "derecha" --modo estructura
 """
 
 import json
