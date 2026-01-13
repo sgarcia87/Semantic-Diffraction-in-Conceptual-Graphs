@@ -131,7 +131,7 @@ All results are obtained using structure-only propagation (no embeddings).
 Axis/role metadata is essential for reproducibility.
 Both datasets are automatically extracted from a larger IA_m graph using the same auditing logic provided in this repository.
 The example datasets are currently in Spanish, as they originate from an evolving conceptual graph developed in that language. The auditing method itself is language-agnostic, and English datasets will be added in future iterations.
-
+If A∩B is empty, results are reported as UNCONSTRAINED (LOW confidence). Use --strict_axis to enforce auditability.
 
 📦 License
 Apache License 2.0
