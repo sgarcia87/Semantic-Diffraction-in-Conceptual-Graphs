@@ -1,0 +1,4880 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:bien fundado__orden__orden total": {
+          "rol": "polo",
+          "opuesto": "orden total"
+        },
+        "eje:dualidad_auto:bien fundado__cadena totalmente ordenada": {
+          "rol": "polo",
+          "opuesto": "cadena totalmente ordenada"
+        },
+        "eje:descubierta:bien fundado__flecha del tiempo__tiempo": {
+          "rol": "polo",
+          "opuesto": "flecha del tiempo"
+        },
+        "eje:descubierta:aproximación__bien fundado__modelado": {
+          "rol": "polo",
+          "opuesto": "aproximación"
+        },
+        "eje:dualidad_auto:aproximación__bien fundado": {
+          "rol": "polo",
+          "opuesto": "aproximación"
+        },
+        "eje:descubierta:bien fundado__grado__modelado": {
+          "rol": "polo",
+          "opuesto": "modelado"
+        },
+        "eje:descubierta:bien fundado__minuendo__sumandos": {
+          "rol": "polo",
+          "opuesto": "minuendo"
+        },
+        "eje:dualidad_auto:bien fundado__minuendo": {
+          "rol": "polo",
+          "opuesto": "minuendo"
+        },
+        "eje:descubierta:bien fundado__función__función inversa": {
+          "rol": "polo",
+          "opuesto": "función inversa"
+        },
+        "eje:descubierta:bien fundado__orientación de giro__sentido del giro": {
+          "rol": "polo",
+          "opuesto": "orientación de giro"
+        },
+        "eje:dualidad_auto:bien fundado__contingencia": {
+          "rol": "polo",
+          "opuesto": "contingencia"
+        },
+        "eje:descubierta:bien fundado__flujo de calor__transferencia de calor": {
+          "rol": "polo",
+          "opuesto": "transferencia de calor"
+        },
+        "eje:dualidad_auto:bien fundado__momento de fuerza": {
+          "rol": "polo",
+          "opuesto": "momento de fuerza"
+        }
+      },
+      "id": "bien fundado"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:realidad__tiempo__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:minuendo__sustraendo__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "minuendo"
+        },
+        "eje:dualidad_auto:minuendo__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "minuendo"
+        },
+        "eje:descubierta:modelado__plano__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "modelado"
+        },
+        "eje:descubierta:ocurrecia__sustraendo__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "sustraendo"
+        },
+        "eje:dualidad_auto:posibilidad__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "posibilidad"
+        },
+        "eje:dualidad_auto:duración__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "duración"
+        },
+        "eje:dualidad_auto:punto__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "punto"
+        },
+        "eje:dualidad_auto:flecha del tiempo__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "flecha del tiempo"
+        },
+        "eje:descubierta:grado__tiempo propio__término": {
+          "rol": "polo",
+          "opuesto": "grado"
+        },
+        "eje:dualidad_auto:aproximación__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "aproximación"
+        },
+        "eje:descubierta:tiempo propio__variación__varianza": {
+          "rol": "polo",
+          "opuesto": "varianza"
+        },
+        "eje:descubierta:flecha del tiempo__tiempo de bajada__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "flecha del tiempo"
+        },
+        "eje:dualidad_auto:tiempo inicial__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo inicial"
+        },
+        "eje:dualidad_auto:tiempo de subida__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo de subida"
+        },
+        "eje:descubierta:tiempo característico__tiempo inicial__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo inicial"
+        },
+        "eje:descubierta:tiempo característico__tiempo de respuesta__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo de respuesta"
+        },
+        "eje:descubierta:flecha del tiempo__tiempo característico__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "flecha del tiempo"
+        },
+        "eje:dualidad_auto:tiempo de asentamiento__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo de asentamiento"
+        },
+        "eje:dualidad_auto:tiempo de respuesta__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo de respuesta"
+        }
+      },
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": true,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768133748.7923036,
+        "difraccion_pareja": [
+          "sustraendo",
+          "minuendo"
+        ],
+        "difraccion_eq_sugerido": "tiempo propio",
+        "difraccion_stats": {
+          "score_top1": 0.15628581505320785,
+          "balance": 0.07665028502111336
+        }
+      },
+      "id": "tiempo propio"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:tiempo:potencia__tiempo__trabajo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:espacio:desplazamiento__energía__trabajo": {
+          "rol": "polo",
+          "opuesto": "desplazamiento"
+        },
+        "eje:termica:calor__energía interna__trabajo": {
+          "rol": "polo",
+          "opuesto": "calor"
+        },
+        "eje:dualidad_auto:tiempo__trabajo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "actividad"
+      },
+      "id": "trabajo"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:generico:aceleración__fuerza__masa": {
+          "rol": "polo",
+          "opuesto": "masa"
+        },
+        "eje:tiempo:aceleración__tiempo__velocidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "velocidad",
+            "tiempo"
+          ]
+        },
+        "eje:descubierta:aceleración__aceleración centrípeta__derivada de velocidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "derivada de velocidad",
+            "aceleración centrípeta"
+          ]
+        },
+        "eje:descubierta:aceleración__derivada de velocidad__vector aceleración": {
+          "rol": "equilibrio",
+          "entre": [
+            "derivada de velocidad",
+            "vector aceleración"
+          ]
+        },
+        "eje:descubierta:aceleración__derivada de velocidad__fuerza neta": {
+          "rol": "equilibrio",
+          "entre": [
+            "derivada de velocidad",
+            "fuerza neta"
+          ]
+        },
+        "eje:descubierta:acarreo__aceleración__derivada de velocidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "derivada de velocidad",
+            "acarreo"
+          ]
+        },
+        "eje:descubierta:aceleración__contingencia__derivada de velocidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "derivada de velocidad",
+            "contingencia"
+          ]
+        },
+        "eje:descubierta:aceleración__evaluación__vector aceleración": {
+          "rol": "equilibrio",
+          "entre": [
+            "vector aceleración",
+            "evaluación"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": true,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768138408.3899941,
+        "difraccion_pareja": [
+          "tiempo",
+          "derivada de velocidad"
+        ],
+        "difraccion_eq_sugerido": "aceleración",
+        "difraccion_stats": {
+          "score_top1": 0.043513464963701426,
+          "balance": 0.49682731079165715,
+          "score_top2": 0.030348961312039485,
+          "ratio": 1.4337711434769782
+        },
+        "difraccion_drift": [
+          [
+            "salto de derivada",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:derivabilidad por tramos__función a trozos__salto de derivada"
+            ]
+          ],
+          [
+            "unidades derivadas",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:constantes físicas__unidades derivadas__unidades fundamentales",
+              "eje:descubierta:derivabilidad por tramos__función a trozos__unidades derivadas",
+              "eje:descubierta:derivación__derivada parcial__unidades derivadas"
+            ]
+          ],
+          [
+            "aproximación",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:afinamiento fino__aproximación__sobreajuste",
+              "eje:descubierta:aproximación__bien fundado__modelado",
+              "eje:descubierta:aproximación__equilibrio__equilibrio dinámico"
+            ]
+          ]
+        ],
+        "difraccion_razones": [
+          "ratio top1/top2 bajo (1.30 < 1.35)"
+        ]
+      },
+      "id": "aceleración"
+    },
+    {
+      "tipo_global": "emergente",
+      "nivel_global": 4,
+      "roles": {
+        "eje:generico:energía__materia__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "energía",
+            "materia"
+          ]
+        },
+        "eje:realidad:espacio__realidad__tiempo": {
+          "rol": "emergente",
+          "de": [
+            "espacio",
+            "tiempo"
+          ]
+        },
+        "eje:descubierta:distancia__espacio__realidad": {
+          "rol": "polo",
+          "opuesto": "distancia"
+        },
+        "eje:descubierta:espacio__espacio vectorial__realidad": {
+          "rol": "polo",
+          "opuesto": "espacio vectorial"
+        },
+        "eje:descubierta:espacio__métrica__realidad": {
+          "rol": "polo",
+          "opuesto": "métrica"
+        },
+        "eje:descubierta:dimensión__espacio__realidad": {
+          "rol": "polo",
+          "opuesto": "dimensión"
+        },
+        "eje:descubierta:coordenadas__espacio__realidad": {
+          "rol": "polo",
+          "opuesto": "coordenadas"
+        },
+        "eje:descubierta:flecha del tiempo__realidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "flecha del tiempo"
+        },
+        "eje:descubierta:duración__realidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "duración"
+        },
+        "eje:descubierta:intervalo temporal__realidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "intervalo temporal"
+        },
+        "eje:descubierta:realidad__tiempo__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo propio"
+        },
+        "eje:descubierta:dilatación temporal__realidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "dilatación temporal"
+        },
+        "eje:descubierta:aproximación__observables__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "observables",
+            "aproximación"
+          ]
+        },
+        "eje:descubierta:modelado__observables__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "observables",
+            "modelado"
+          ]
+        },
+        "eje:descubierta:estado físico__modelado__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "estado físico",
+            "modelado"
+          ]
+        },
+        "eje:descubierta:flecha del tiempo__modelado__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "modelado",
+            "flecha del tiempo"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "realidad"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:tiempo:centro focal__consciencia__presente": {
+          "rol": "polo",
+          "opuesto": "presente"
+        },
+        "eje:espacio_vertical:abajo__arriba__centro focal__espacio": {
+          "rol": "equilibrio",
+          "entre": [
+            "arriba",
+            "abajo"
+          ]
+        },
+        "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda": {
+          "rol": "equilibrio",
+          "entre": [
+            "izquierda",
+            "derecha"
+          ]
+        },
+        "eje:espacio_frontal:centro focal__delante__detrás__espacio": {
+          "rol": "equilibrio",
+          "entre": [
+            "delante",
+            "detrás"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": true,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768137177.1205754,
+        "difraccion_pareja": [
+          "abajo",
+          "consciencia"
+        ],
+        "difraccion_eq_sugerido": "centro focal",
+        "difraccion_stats": {
+          "score_top1": 0.15573295450106645,
+          "balance": 0.29294424028284977,
+          "score_top2": 0.09846510343556716,
+          "ratio": 1.581605554326907
+        },
+        "difraccion_drift": [
+          [
+            "derecha",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:derecha__izquierda",
+              "eje:dualidad_detectada:derecha__izquierda",
+              "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda"
+            ]
+          ],
+          [
+            "delante",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:delante__detrás",
+              "eje:dualidad_detectada:delante__detrás",
+              "eje:espacio_frontal:centro focal__delante__detrás__espacio"
+            ]
+          ],
+          [
+            "izquierda",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:derecha__izquierda",
+              "eje:dualidad_detectada:derecha__izquierda",
+              "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda"
+            ]
+          ],
+          [
+            "detrás",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:delante__detrás",
+              "eje:dualidad_detectada:delante__detrás",
+              "eje:espacio_frontal:centro focal__delante__detrás__espacio"
+            ]
+          ],
+          [
+            "pasado",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:futuro__pasado",
+              "eje:dualidad_detectada:futuro__pasado",
+              "eje:tiempo:futuro__pasado__presente__tiempo"
+            ]
+          ],
+          [
+            "futuro",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:futuro__pasado",
+              "eje:dualidad_detectada:futuro__pasado",
+              "eje:tiempo:futuro__pasado__presente__tiempo"
+            ]
+          ],
+          [
+            "coordenadas",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:acarreo__coordenada y__coordenadas",
+              "eje:descubierta:coordenada temporal__coordenada y__coordenadas",
+              "eje:descubierta:coordenada temporal__coordenadas__dilatación temporal"
+            ]
+          ],
+          [
+            "métrica",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:coeficientes métricos__espacio métrico__métrica",
+              "eje:descubierta:dimensión__métrica__punto 2d",
+              "eje:descubierta:espacio de parámetros__espacio métrico__métrica"
+            ]
+          ],
+          [
+            "espacio vectorial",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:aceleración centrípeta__espacio vectorial__vector aceleración",
+              "eje:descubierta:espacio de parámetros__espacio vectorial__tasa de variación",
+              "eje:descubierta:espacio__espacio vectorial__realidad"
+            ]
+          ],
+          [
+            "flecha del tiempo",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:bien fundado__flecha del tiempo__tiempo",
+              "eje:descubierta:flecha del tiempo__masa__masa en reposo",
+              "eje:descubierta:flecha del tiempo__modelado__realidad"
+            ]
+          ]
+        ],
+        "difraccion_razones": [
+          "ratio top1/top2 bajo (1.07 < 1.35)"
+        ]
+      },
+      "id": "centro focal"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:acarreo__línea__segmento": {
+          "rol": "polo",
+          "opuesto": "segmento"
+        },
+        "eje:dualidad_auto:acarreo__segmento": {
+          "rol": "polo",
+          "opuesto": "segmento"
+        },
+        "eje:descubierta:acarreo__fuerza__momento de fuerza": {
+          "rol": "polo",
+          "opuesto": "momento de fuerza"
+        },
+        "eje:descubierta:acarreo__recta__recta numérica": {
+          "rol": "polo",
+          "opuesto": "recta numérica"
+        },
+        "eje:dualidad_auto:acarreo__cronología": {
+          "rol": "polo",
+          "opuesto": "cronología"
+        },
+        "eje:dualidad_auto:acarreo__masa en reposo": {
+          "rol": "polo",
+          "opuesto": "masa en reposo"
+        },
+        "eje:dualidad_auto:acarreo__magnitud física": {
+          "rol": "polo",
+          "opuesto": "magnitud física"
+        },
+        "eje:dualidad_auto:acarreo__momento de fuerza": {
+          "rol": "polo",
+          "opuesto": "momento de fuerza"
+        },
+        "eje:dualidad_auto:acarreo__varianza": {
+          "rol": "polo",
+          "opuesto": "varianza"
+        },
+        "eje:dualidad_auto:acarreo__resultante": {
+          "rol": "polo",
+          "opuesto": "resultante"
+        },
+        "eje:descubierta:acarreo__rango__segmento": {
+          "rol": "polo",
+          "opuesto": "segmento"
+        },
+        "eje:descubierta:acarreo__aceleración__derivada de velocidad": {
+          "rol": "polo",
+          "opuesto": "derivada de velocidad"
+        },
+        "eje:dualidad_auto:acarreo__evaluación": {
+          "rol": "polo",
+          "opuesto": "evaluación"
+        },
+        "eje:dualidad_auto:acarreo__contingencia": {
+          "rol": "polo",
+          "opuesto": "contingencia"
+        },
+        "eje:dualidad_auto:acarreo__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:dualidad_auto:acarreo__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "fuerza neta"
+        },
+        "eje:descubierta:acarreo__coordenada y__coordenadas": {
+          "rol": "polo",
+          "opuesto": "coordenadas"
+        },
+        "eje:dualidad_auto:acarreo__coordenadas": {
+          "rol": "polo",
+          "opuesto": "coordenadas"
+        },
+        "eje:descubierta:acarreo__radicando__sumandos": {
+          "rol": "polo",
+          "opuesto": "sumandos"
+        },
+        "eje:dualidad_auto:acarreo__flecha del tiempo": {
+          "rol": "polo",
+          "opuesto": "flecha del tiempo"
+        },
+        "eje:dualidad_auto:acarreo__exponente fraccionario": {
+          "rol": "polo",
+          "opuesto": "exponente fraccionario"
+        },
+        "eje:descubierta:abierto__acarreo__punto interior": {
+          "rol": "polo",
+          "opuesto": "punto interior"
+        },
+        "eje:dualidad_auto:acarreo__punto interior": {
+          "rol": "polo",
+          "opuesto": "punto interior"
+        },
+        "eje:dualidad_auto:acarreo__bola abierta": {
+          "rol": "polo",
+          "opuesto": "bola abierta"
+        },
+        "eje:descubierta:acarreo__cuadrilátero__curva": {
+          "rol": "polo",
+          "opuesto": "curva"
+        },
+        "eje:descubierta:acarreo__cuadrilátero__perímetro": {
+          "rol": "polo",
+          "opuesto": "perímetro"
+        },
+        "eje:dualidad_auto:acarreo__perímetro": {
+          "rol": "polo",
+          "opuesto": "perímetro"
+        },
+        "eje:dualidad_auto:acarreo__lados": {
+          "rol": "polo",
+          "opuesto": "lados"
+        },
+        "eje:descubierta:acarreo__conductor fase__fase única": {
+          "rol": "polo",
+          "opuesto": "conductor fase"
+        },
+        "eje:descubierta:acarreo__acotación__aproximación": {
+          "rol": "polo",
+          "opuesto": "aproximación"
+        },
+        "eje:dualidad_auto:acarreo__aproximación": {
+          "rol": "polo",
+          "opuesto": "aproximación"
+        },
+        "eje:descubierta:acarreo__acotación__acotado": {
+          "rol": "polo",
+          "opuesto": "acotación"
+        },
+        "eje:dualidad_auto:acarreo__acumulador": {
+          "rol": "polo",
+          "opuesto": "acumulador"
+        }
+      },
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "suma"
+      },
+      "nivel_conceptual": 0,
+      "id": "acarreo"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:aceleración__derivada de velocidad__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "derivada de velocidad"
+        },
+        "eje:dualidad_auto:fuerza neta__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:dualidad_auto:derivada de velocidad__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "derivada de velocidad"
+        },
+        "eje:dualidad_auto:acarreo__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "acarreo"
+        },
+        "eje:dualidad_auto:contingencia__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "contingencia"
+        },
+        "eje:dualidad_auto:aceleración centrípeta__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "aceleración centrípeta"
+        },
+        "eje:descubierta:fuerza neta__momento de torsión__par de fuerzas": {
+          "rol": "polo",
+          "opuesto": "momento de torsión"
+        },
+        "eje:dualidad_auto:fuerza neta__momento de fuerza": {
+          "rol": "polo",
+          "opuesto": "momento de fuerza"
+        },
+        "eje:dualidad_auto:fuerza neta__momento axial": {
+          "rol": "polo",
+          "opuesto": "momento axial"
+        },
+        "eje:dualidad_auto:fuerza neta__par de ángulos": {
+          "rol": "polo",
+          "opuesto": "par de ángulos"
+        },
+        "eje:dualidad_auto:fuerza neta__momento de torsión": {
+          "rol": "polo",
+          "opuesto": "momento de torsión"
+        },
+        "eje:dualidad_auto:brazo de palanca__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "brazo de palanca"
+        },
+        "eje:descubierta:fuerza aplicada__fuerza neta__fuerzas paralelas opuestas": {
+          "rol": "polo",
+          "opuesto": "fuerzas paralelas opuestas"
+        },
+        "eje:descubierta:fuerza aplicada__fuerza neta__fuerza resultante": {
+          "rol": "polo",
+          "opuesto": "fuerza resultante"
+        },
+        "eje:descubierta:fuerza aplicada__fuerza neta__momento de fuerza": {
+          "rol": "polo",
+          "opuesto": "momento de fuerza"
+        },
+        "eje:descubierta:fuerza aplicada__fuerza neta__par de fuerzas": {
+          "rol": "polo",
+          "opuesto": "par de fuerzas"
+        },
+        "eje:dualidad_auto:fuerza neta__fuerzas paralelas opuestas": {
+          "rol": "polo",
+          "opuesto": "fuerzas paralelas opuestas"
+        }
+      },
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": true,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768137765.1945076,
+        "difraccion_pareja": [
+          "momento de fuerza",
+          "fuerza aplicada"
+        ],
+        "difraccion_eq_sugerido": "fuerza neta",
+        "difraccion_stats": {
+          "score_top1": 0.03914828049811389,
+          "balance": 0.5812263332308728
+        },
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "segunda ley de newton"
+      },
+      "id": "fuerza neta"
+    },
+    {
+      "tipo_global": "sintesis",
+      "nivel_global": 3,
+      "roles": {
+        "eje:dualidad_base:espacio__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:tiempo:espacio__relatividad__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:espacio_vertical:abajo__arriba__centro focal__espacio": {
+          "rol": "sintesis",
+          "de": [
+            "arriba",
+            "centro focal",
+            "abajo"
+          ]
+        },
+        "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda": {
+          "rol": "sintesis",
+          "de": [
+            "izquierda",
+            "centro focal",
+            "derecha"
+          ]
+        },
+        "eje:espacio_frontal:centro focal__delante__detrás__espacio": {
+          "rol": "sintesis",
+          "de": [
+            "delante",
+            "centro focal",
+            "detrás"
+          ]
+        },
+        "eje:dualidad_detectada:espacio__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:descubierta:distancia__espacio__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "distancia"
+          ]
+        },
+        "eje:descubierta:espacio__espacio vectorial__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "espacio vectorial"
+          ]
+        },
+        "eje:descubierta:espacio__métrica__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "métrica"
+          ]
+        },
+        "eje:descubierta:dimensión__espacio__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "dimensión"
+          ]
+        },
+        "eje:descubierta:coordenadas__espacio__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "coordenadas"
+          ]
+        },
+        "eje:dualidad_auto:espacio__métrica": {
+          "rol": "polo",
+          "opuesto": "métrica"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "espacio"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:termica:calor__frío__temperatura__tibio": {
+          "rol": "equilibrio",
+          "entre": [
+            "calor",
+            "frío"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": true,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768133461.258948,
+        "difraccion_pareja": [
+          "calor",
+          "frío"
+        ],
+        "difraccion_eq_sugerido": "tibio",
+        "difraccion_stats": {
+          "score_top1": 0.21639257469363973,
+          "balance": 0.04627939759335538
+        }
+      },
+      "id": "tibio"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:futuro__pasado": {
+          "rol": "polo",
+          "opuesto": "futuro"
+        },
+        "eje:tiempo:futuro__pasado__presente__tiempo": {
+          "rol": "polo",
+          "opuesto": "futuro"
+        },
+        "eje:dualidad_detectada:futuro__pasado": {
+          "rol": "polo",
+          "opuesto": "futuro"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "pasado"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:derecha__izquierda": {
+          "rol": "polo",
+          "opuesto": "izquierda"
+        },
+        "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda": {
+          "rol": "polo",
+          "opuesto": "izquierda"
+        },
+        "eje:dualidad_auto:abajo__derecha": {
+          "rol": "polo",
+          "opuesto": "abajo"
+        },
+        "eje:dualidad_auto:arriba__derecha": {
+          "rol": "polo",
+          "opuesto": "arriba"
+        },
+        "eje:dualidad_auto:derecha__detrás": {
+          "rol": "polo",
+          "opuesto": "detrás"
+        },
+        "eje:dualidad_auto:delante__derecha": {
+          "rol": "polo",
+          "opuesto": "delante"
+        },
+        "eje:dualidad_detectada:derecha__izquierda": {
+          "rol": "polo",
+          "opuesto": "izquierda"
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": false,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768137177.0671244,
+        "difraccion_pareja": [
+          "abajo",
+          "izquierda"
+        ],
+        "difraccion_eq_sugerido": "derecha",
+        "difraccion_stats": {
+          "score_top1": 0.175321612257778,
+          "balance": 0.000525516992224475,
+          "score_top2": 0.1633004823348663,
+          "ratio": 1.0736135604196257
+        },
+        "difraccion_razones": [
+          "ratio top1/top2 bajo (1.07 < 1.35)"
+        ],
+        "difraccion_drift": [
+          [
+            "delante",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:delante__detrás",
+              "eje:dualidad_detectada:delante__detrás",
+              "eje:espacio_frontal:centro focal__delante__detrás__espacio"
+            ]
+          ],
+          [
+            "detrás",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:delante__detrás",
+              "eje:dualidad_detectada:delante__detrás",
+              "eje:espacio_frontal:centro focal__delante__detrás__espacio"
+            ]
+          ],
+          [
+            "coordenadas",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:acarreo__coordenada y__coordenadas",
+              "eje:descubierta:coordenada temporal__coordenada y__coordenadas",
+              "eje:descubierta:coordenada temporal__coordenadas__dilatación temporal"
+            ]
+          ],
+          [
+            "métrica",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:coeficientes métricos__espacio métrico__métrica",
+              "eje:descubierta:dimensión__métrica__punto 2d",
+              "eje:descubierta:espacio de parámetros__espacio métrico__métrica"
+            ]
+          ],
+          [
+            "pasado",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:futuro__pasado",
+              "eje:dualidad_detectada:futuro__pasado",
+              "eje:tiempo:futuro__pasado__presente__tiempo"
+            ]
+          ],
+          [
+            "futuro",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:futuro__pasado",
+              "eje:dualidad_detectada:futuro__pasado",
+              "eje:tiempo:futuro__pasado__presente__tiempo"
+            ]
+          ],
+          [
+            "espacio vectorial",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:aceleración centrípeta__espacio vectorial__vector aceleración",
+              "eje:descubierta:espacio de parámetros__espacio vectorial__tasa de variación",
+              "eje:descubierta:espacio__espacio vectorial__realidad"
+            ]
+          ],
+          [
+            "distancia",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:distancia__espacio__realidad"
+            ]
+          ],
+          [
+            "espacio dual",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:descubierta:dualidad__dualidad de poincaré__espacio dual",
+              "eje:descubierta:espacio dual__espacio métrico__métrica"
+            ]
+          ]
+        ]
+      },
+      "id": "derecha"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:derecha__izquierda": {
+          "rol": "polo",
+          "opuesto": "derecha"
+        },
+        "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda": {
+          "rol": "polo",
+          "opuesto": "derecha"
+        },
+        "eje:dualidad_auto:delante__izquierda": {
+          "rol": "polo",
+          "opuesto": "delante"
+        },
+        "eje:dualidad_auto:abajo__izquierda": {
+          "rol": "polo",
+          "opuesto": "abajo"
+        },
+        "eje:dualidad_auto:arriba__izquierda": {
+          "rol": "polo",
+          "opuesto": "arriba"
+        },
+        "eje:dualidad_auto:detrás__izquierda": {
+          "rol": "polo",
+          "opuesto": "detrás"
+        },
+        "eje:dualidad_detectada:derecha__izquierda": {
+          "rol": "polo",
+          "opuesto": "derecha"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "izquierda"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:distancia__espacio__realidad": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:distancia__distancia euclidiana__isometría euclidiana": {
+          "rol": "polo",
+          "opuesto": "isometría euclidiana"
+        },
+        "eje:descubierta:distancia__distancia euclidiana__espacio euclidiano": {
+          "rol": "polo",
+          "opuesto": "espacio euclidiano"
+        },
+        "eje:dualidad_auto:distancia__división euclidiana": {
+          "rol": "polo",
+          "opuesto": "división euclidiana"
+        },
+        "eje:dualidad_auto:conservación de distancias__distancia": {
+          "rol": "polo",
+          "opuesto": "conservación de distancias"
+        },
+        "eje:dualidad_auto:distancia__espacio euclidiano": {
+          "rol": "polo",
+          "opuesto": "espacio euclidiano"
+        },
+        "eje:dualidad_auto:distancia__norma euclidiana": {
+          "rol": "polo",
+          "opuesto": "norma euclidiana"
+        }
+      },
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "unicidad del límite"
+      },
+      "id": "distancia"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:tiempo:potencia__tiempo__trabajo": {
+          "rol": "equilibrio",
+          "entre": [
+            "trabajo",
+            "tiempo"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "potencia"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:futuro__pasado": {
+          "rol": "polo",
+          "opuesto": "pasado"
+        },
+        "eje:tiempo:futuro__pasado__presente__tiempo": {
+          "rol": "polo",
+          "opuesto": "pasado"
+        },
+        "eje:dualidad_detectada:futuro__pasado": {
+          "rol": "polo",
+          "opuesto": "pasado"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "futuro"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:tiempo:posición__tiempo__velocidad": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:dualidad_auto:posición__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "posición"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:descubierta:intervalo temporal__realidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:intervalo temporal__métrica__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "tiempo",
+            "métrica"
+          ]
+        },
+        "eje:descubierta:dilatación temporal__intervalo temporal__punto temporal": {
+          "rol": "polo",
+          "opuesto": "dilatación temporal"
+        },
+        "eje:descubierta:eje temporal__intervalo temporal__jitter temporal": {
+          "rol": "polo",
+          "opuesto": "eje temporal"
+        },
+        "eje:descubierta:acotación en intervalo__intervalo de muestreo__intervalo temporal": {
+          "rol": "polo",
+          "opuesto": "intervalo de muestreo"
+        },
+        "eje:descubierta:acotación en intervalo__intervalo temporal__intervalos de definición": {
+          "rol": "polo",
+          "opuesto": "intervalos de definición"
+        },
+        "eje:descubierta:acotación en intervalo__intervalo temporal__intervalos cerrados": {
+          "rol": "polo",
+          "opuesto": "intervalos cerrados"
+        }
+      },
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "unidad de tiempo"
+      },
+      "id": "intervalo temporal"
+    },
+    {
+      "tipo_global": "sintesis",
+      "nivel_global": 3,
+      "roles": {
+        "eje:dualidad_base:espacio__tiempo": {
+          "rol": "polo",
+          "opuesto": "espacio"
+        },
+        "eje:tiempo:posición__tiempo__velocidad": {
+          "rol": "polo",
+          "opuesto": "posición"
+        },
+        "eje:tiempo:aceleración__tiempo__velocidad": {
+          "rol": "polo",
+          "opuesto": "velocidad"
+        },
+        "eje:tiempo:potencia__tiempo__trabajo": {
+          "rol": "polo",
+          "opuesto": "trabajo"
+        },
+        "eje:tiempo:espacio__relatividad__tiempo": {
+          "rol": "polo",
+          "opuesto": "espacio"
+        },
+        "eje:tiempo:futuro__pasado__presente__tiempo": {
+          "rol": "sintesis",
+          "de": [
+            "pasado",
+            "presente",
+            "futuro"
+          ]
+        },
+        "eje:dualidad_auto:tiempo__trabajo": {
+          "rol": "polo",
+          "opuesto": "trabajo"
+        },
+        "eje:dualidad_auto:posición__tiempo": {
+          "rol": "polo",
+          "opuesto": "posición"
+        },
+        "eje:dualidad_detectada:espacio__tiempo": {
+          "rol": "polo",
+          "opuesto": "espacio"
+        },
+        "eje:descubierta:flecha del tiempo__realidad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "flecha del tiempo"
+          ]
+        },
+        "eje:descubierta:duración__realidad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "duración"
+          ]
+        },
+        "eje:descubierta:intervalo temporal__realidad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "intervalo temporal"
+          ]
+        },
+        "eje:descubierta:realidad__tiempo__tiempo propio": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "tiempo propio"
+          ]
+        },
+        "eje:descubierta:dilatación temporal__realidad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "dilatación temporal"
+          ]
+        },
+        "eje:descubierta:flecha del tiempo__signo negativo__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "flecha del tiempo",
+            "signo negativo"
+          ]
+        },
+        "eje:descubierta:bien fundado__flecha del tiempo__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "flecha del tiempo",
+            "bien fundado"
+          ]
+        },
+        "eje:descubierta:intervalo temporal__métrica__tiempo": {
+          "rol": "polo",
+          "opuesto": "métrica"
+        },
+        "eje:dualidad_auto:métrica__tiempo": {
+          "rol": "polo",
+          "opuesto": "métrica"
+        },
+        "eje:dualidad_auto:fuerza neta__tiempo": {
+          "rol": "polo",
+          "opuesto": "fuerza neta"
+        },
+        "eje:dualidad_auto:acarreo__tiempo": {
+          "rol": "polo",
+          "opuesto": "acarreo"
+        },
+        "eje:dualidad_auto:contingencia__tiempo": {
+          "rol": "polo",
+          "opuesto": "contingencia"
+        },
+        "eje:dualidad_auto:derivada de velocidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "derivada de velocidad"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "tiempo"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:calor__frío": {
+          "rol": "polo",
+          "opuesto": "calor"
+        },
+        "eje:termica:calor__frío__temperatura__tibio": {
+          "rol": "polo",
+          "opuesto": "calor"
+        },
+        "eje:dualidad_detectada:calor__frío": {
+          "rol": "polo",
+          "opuesto": "calor"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "frío"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:calor__frío": {
+          "rol": "polo",
+          "opuesto": "frío"
+        },
+        "eje:termica:calor__frío__temperatura__tibio": {
+          "rol": "polo",
+          "opuesto": "frío"
+        },
+        "eje:termica:calor__energía interna__trabajo": {
+          "rol": "polo",
+          "opuesto": "trabajo"
+        },
+        "eje:dualidad_detectada:calor__frío": {
+          "rol": "polo",
+          "opuesto": "frío"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "calor"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:negativo__retroalimentación negativa__signo negativo": {
+          "rol": "polo",
+          "opuesto": "retroalimentación negativa"
+        },
+        "eje:descubierta:coordenadas__negativo__signo negativo": {
+          "rol": "polo",
+          "opuesto": "coordenadas"
+        },
+        "eje:dualidad_auto:retroalimentación negativa__signo negativo": {
+          "rol": "polo",
+          "opuesto": "retroalimentación negativa"
+        },
+        "eje:descubierta:flecha del tiempo__signo negativo__tiempo": {
+          "rol": "polo",
+          "opuesto": "flecha del tiempo"
+        },
+        "eje:descubierta:número real positivo__positivo__signo negativo": {
+          "rol": "polo",
+          "opuesto": "número real positivo"
+        },
+        "eje:dualidad_auto:número real positivo__signo negativo": {
+          "rol": "polo",
+          "opuesto": "número real positivo"
+        },
+        "eje:descubierta:campo de coeficientes__signo del coeficiente__signo negativo": {
+          "rol": "polo",
+          "opuesto": "campo de coeficientes"
+        },
+        "eje:descubierta:cambio de signo__función signo__signo negativo": {
+          "rol": "polo",
+          "opuesto": "función signo"
+        },
+        "eje:dualidad_auto:función signo__signo negativo": {
+          "rol": "polo",
+          "opuesto": "función signo"
+        }
+      },
+      "id": "signo negativo"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:espacio__métrica__realidad": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:dimensión__métrica__punto 2d": {
+          "rol": "polo",
+          "opuesto": "punto 2d"
+        },
+        "eje:dualidad_auto:espacio__métrica": {
+          "rol": "polo",
+          "opuesto": "espacio"
+        },
+        "eje:descubierta:intervalo temporal__métrica__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:dualidad_auto:métrica__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:descubierta:coeficientes métricos__espacio métrico__métrica": {
+          "rol": "polo",
+          "opuesto": "coeficientes métricos"
+        },
+        "eje:descubierta:espacio de parámetros__espacio métrico__métrica": {
+          "rol": "polo",
+          "opuesto": "espacio de parámetros"
+        },
+        "eje:descubierta:espacio dual__espacio métrico__métrica": {
+          "rol": "polo",
+          "opuesto": "espacio dual"
+        },
+        "eje:dualidad_auto:espacio dual__métrica": {
+          "rol": "polo",
+          "opuesto": "espacio dual"
+        },
+        "eje:descubierta:métrica__métrica riemanniana__volumen riemanniano": {
+          "rol": "polo",
+          "opuesto": "volumen riemanniano"
+        },
+        "eje:dualidad_auto:métrica__métrica inducida": {
+          "rol": "polo",
+          "opuesto": "métrica inducida"
+        },
+        "eje:dualidad_auto:métrica__volumen riemanniano": {
+          "rol": "polo",
+          "opuesto": "volumen riemanniano"
+        },
+        "eje:dualidad_auto:curvatura de riemann__métrica": {
+          "rol": "polo",
+          "opuesto": "curvatura de riemann"
+        },
+        "eje:dualidad_auto:métrica__tensor métrico": {
+          "rol": "polo",
+          "opuesto": "tensor métrico"
+        }
+      },
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "espacio"
+      },
+      "id": "métrica"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:tiempo:centro focal__consciencia__presente": {
+          "rol": "polo",
+          "opuesto": "centro focal"
+        },
+        "eje:tiempo:futuro__pasado__presente__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "pasado",
+            "futuro"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": false,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768133461.085298,
+        "difraccion_pareja": [
+          "pasado",
+          "consciencia"
+        ],
+        "difraccion_eq_sugerido": "presente",
+        "difraccion_stats": {
+          "score_top1": 0.21809899584876502,
+          "balance": 0.07075981296398738,
+          "score_top2": 0.16840350658567044,
+          "ratio": 1.2950977106751245
+        },
+        "difraccion_razones": [
+          "ratio top1/top2 bajo (1.30 < 1.35)"
+        ],
+        "difraccion_drift": [
+          [
+            "abajo",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:abajo__arriba",
+              "eje:espacio_vertical:abajo__arriba__centro focal__espacio"
+            ]
+          ],
+          [
+            "arriba",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:abajo__arriba",
+              "eje:espacio_vertical:abajo__arriba__centro focal__espacio"
+            ]
+          ],
+          [
+            "izquierda",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:derecha__izquierda",
+              "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda"
+            ]
+          ],
+          [
+            "derecha",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:derecha__izquierda",
+              "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda"
+            ]
+          ],
+          [
+            "detrás",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:delante__detrás",
+              "eje:espacio_frontal:centro focal__delante__detrás__espacio"
+            ]
+          ],
+          [
+            "delante",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:delante__detrás",
+              "eje:espacio_frontal:centro focal__delante__detrás__espacio"
+            ]
+          ],
+          [
+            "masa",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:generico:aceleración__fuerza__masa"
+            ]
+          ],
+          [
+            "trabajo",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:espacio:desplazamiento__energía__trabajo",
+              "eje:termica:calor__energía interna__trabajo",
+              "eje:tiempo:potencia__tiempo__trabajo"
+            ]
+          ],
+          [
+            "posición",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:tiempo:posición__tiempo__velocidad"
+            ]
+          ],
+          [
+            "desplazamiento",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:espacio:desplazamiento__energía__trabajo"
+            ]
+          ]
+        ]
+      },
+      "id": "presente"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:termica:calor__energía interna__trabajo": {
+          "rol": "equilibrio",
+          "entre": [
+            "calor",
+            "trabajo"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "potencial termodinámico"
+      },
+      "id": "energía interna"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:abajo__arriba": {
+          "rol": "polo",
+          "opuesto": "arriba"
+        },
+        "eje:espacio_vertical:abajo__arriba__centro focal__espacio": {
+          "rol": "polo",
+          "opuesto": "arriba"
+        },
+        "eje:dualidad_auto:abajo__derecha": {
+          "rol": "polo",
+          "opuesto": "derecha"
+        },
+        "eje:dualidad_auto:abajo__izquierda": {
+          "rol": "polo",
+          "opuesto": "izquierda"
+        },
+        "eje:dualidad_auto:abajo__delante": {
+          "rol": "polo",
+          "opuesto": "delante"
+        },
+        "eje:dualidad_auto:abajo__detrás": {
+          "rol": "polo",
+          "opuesto": "detrás"
+        },
+        "eje:dualidad_detectada:abajo__arriba": {
+          "rol": "polo",
+          "opuesto": "arriba"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "abajo"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:dilatación temporal__realidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:dilatación temporal__instante temporal__punto temporal": {
+          "rol": "polo",
+          "opuesto": "punto temporal"
+        },
+        "eje:descubierta:dilatación temporal__intervalo temporal__punto temporal": {
+          "rol": "polo",
+          "opuesto": "intervalo temporal"
+        },
+        "eje:descubierta:coordenada temporal__coordenadas__dilatación temporal": {
+          "rol": "polo",
+          "opuesto": "coordenadas"
+        },
+        "eje:descubierta:dilatación temporal__eje temporal__jitter temporal": {
+          "rol": "polo",
+          "opuesto": "eje temporal"
+        },
+        "eje:dualidad_auto:dilatación temporal__evento puntual": {
+          "rol": "polo",
+          "opuesto": "evento puntual"
+        },
+        "eje:dualidad_auto:dilatación temporal__marca temporal": {
+          "rol": "polo",
+          "opuesto": "marca temporal"
+        },
+        "eje:dualidad_auto:dilatación temporal__eje temporal": {
+          "rol": "polo",
+          "opuesto": "eje temporal"
+        },
+        "eje:dualidad_auto:dilatación temporal__evolución temporal": {
+          "rol": "polo",
+          "opuesto": "evolución temporal"
+        }
+      },
+      "id": "dilatación temporal"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:abajo__arriba": {
+          "rol": "polo",
+          "opuesto": "abajo"
+        },
+        "eje:espacio_vertical:abajo__arriba__centro focal__espacio": {
+          "rol": "polo",
+          "opuesto": "abajo"
+        },
+        "eje:dualidad_auto:arriba__derecha": {
+          "rol": "polo",
+          "opuesto": "derecha"
+        },
+        "eje:dualidad_auto:arriba__delante": {
+          "rol": "polo",
+          "opuesto": "delante"
+        },
+        "eje:dualidad_auto:arriba__izquierda": {
+          "rol": "polo",
+          "opuesto": "izquierda"
+        },
+        "eje:dualidad_auto:arriba__detrás": {
+          "rol": "polo",
+          "opuesto": "detrás"
+        },
+        "eje:dualidad_detectada:abajo__arriba": {
+          "rol": "polo",
+          "opuesto": "abajo"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "arriba"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:termica:presión__temperatura__volumen": {
+          "rol": "polo",
+          "opuesto": "volumen"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "presión"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:termica:presión__temperatura__volumen": {
+          "rol": "polo",
+          "opuesto": "presión"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "volumen"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:delante__detrás": {
+          "rol": "polo",
+          "opuesto": "delante"
+        },
+        "eje:espacio_frontal:centro focal__delante__detrás__espacio": {
+          "rol": "polo",
+          "opuesto": "delante"
+        },
+        "eje:dualidad_auto:derecha__detrás": {
+          "rol": "polo",
+          "opuesto": "derecha"
+        },
+        "eje:dualidad_auto:abajo__detrás": {
+          "rol": "polo",
+          "opuesto": "abajo"
+        },
+        "eje:dualidad_auto:arriba__detrás": {
+          "rol": "polo",
+          "opuesto": "arriba"
+        },
+        "eje:dualidad_auto:detrás__izquierda": {
+          "rol": "polo",
+          "opuesto": "izquierda"
+        },
+        "eje:dualidad_detectada:delante__detrás": {
+          "rol": "polo",
+          "opuesto": "delante"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "detrás"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:espacio__espacio vectorial__realidad": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:aceleración centrípeta__espacio vectorial__vector aceleración": {
+          "rol": "polo",
+          "opuesto": "aceleración centrípeta"
+        },
+        "eje:descubierta:espacio de parámetros__espacio vectorial__tasa de variación": {
+          "rol": "polo",
+          "opuesto": "tasa de variación"
+        }
+      },
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "producto interior"
+      },
+      "id": "espacio vectorial"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:aceleración__aceleración centrípeta__derivada de velocidad": {
+          "rol": "polo",
+          "opuesto": "aceleración centrípeta"
+        },
+        "eje:descubierta:aceleración__derivada de velocidad__vector aceleración": {
+          "rol": "polo",
+          "opuesto": "vector aceleración"
+        },
+        "eje:descubierta:aceleración__derivada de velocidad__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "fuerza neta"
+        },
+        "eje:descubierta:acarreo__aceleración__derivada de velocidad": {
+          "rol": "polo",
+          "opuesto": "acarreo"
+        },
+        "eje:descubierta:aceleración__contingencia__derivada de velocidad": {
+          "rol": "polo",
+          "opuesto": "contingencia"
+        },
+        "eje:dualidad_auto:derivada de velocidad__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "fuerza neta"
+        },
+        "eje:dualidad_auto:derivada de velocidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:dualidad_auto:aceleración centrípeta__derivada de velocidad": {
+          "rol": "polo",
+          "opuesto": "aceleración centrípeta"
+        },
+        "eje:descubierta:derivada__derivada de velocidad__reglas de derivación": {
+          "rol": "polo",
+          "opuesto": "reglas de derivación"
+        },
+        "eje:descubierta:derivabilidad por tramos__derivada de velocidad__función a trozos": {
+          "rol": "polo",
+          "opuesto": "función a trozos"
+        },
+        "eje:dualidad_auto:derivada de velocidad__salto de derivada": {
+          "rol": "polo",
+          "opuesto": "salto de derivada"
+        },
+        "eje:descubierta:derivación__derivada de velocidad__reglas de derivación": {
+          "rol": "polo",
+          "opuesto": "reglas de derivación"
+        },
+        "eje:descubierta:derivada de velocidad__potencia instantánea__velocidad instantánea": {
+          "rol": "polo",
+          "opuesto": "potencia instantánea"
+        },
+        "eje:dualidad_auto:derivada de velocidad__rapidez instantánea": {
+          "rol": "polo",
+          "opuesto": "rapidez instantánea"
+        },
+        "eje:dualidad_auto:derivada de velocidad__vector velocidad": {
+          "rol": "polo",
+          "opuesto": "vector velocidad"
+        },
+        "eje:descubierta:derivada de velocidad__diferencia relativa__velocidad relativa": {
+          "rol": "polo",
+          "opuesto": "diferencia relativa"
+        }
+      },
+      "id": "derivada de velocidad"
+    },
+    {
+      "tipo_global": "sintesis",
+      "nivel_global": 3,
+      "roles": {
+        "eje:termica:presión__temperatura__volumen": {
+          "rol": "equilibrio",
+          "entre": [
+            "presión",
+            "volumen"
+          ]
+        },
+        "eje:termica:calor__frío__temperatura__tibio": {
+          "rol": "sintesis",
+          "de": [
+            "calor",
+            "tibio",
+            "frío"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "frío"
+      },
+      "id": "temperatura"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:tiempo:espacio__relatividad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "espacio",
+            "tiempo"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "relatividad"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:tiempo:posición__tiempo__velocidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "posición",
+            "tiempo"
+          ]
+        },
+        "eje:tiempo:aceleración__tiempo__velocidad": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": true,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768133461.2403677,
+        "difraccion_pareja": [
+          "aceleración",
+          "posición"
+        ],
+        "difraccion_eq_sugerido": "velocidad",
+        "difraccion_stats": {
+          "score_top1": 0.2277966823064424,
+          "balance": 0.40320203443114055,
+          "score_top2": 0.09401281966725814,
+          "ratio": 2.42303850807463
+        },
+        "difraccion_drift": [
+          [
+            "pasado",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:futuro__pasado",
+              "eje:tiempo:futuro__pasado__presente__tiempo"
+            ]
+          ],
+          [
+            "futuro",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:futuro__pasado",
+              "eje:tiempo:futuro__pasado__presente__tiempo"
+            ]
+          ],
+          [
+            "abajo",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:abajo__arriba",
+              "eje:espacio_vertical:abajo__arriba__centro focal__espacio"
+            ]
+          ],
+          [
+            "arriba",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:abajo__arriba",
+              "eje:espacio_vertical:abajo__arriba__centro focal__espacio"
+            ]
+          ],
+          [
+            "izquierda",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:derecha__izquierda",
+              "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda"
+            ]
+          ],
+          [
+            "derecha",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:derecha__izquierda",
+              "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda"
+            ]
+          ],
+          [
+            "detrás",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:delante__detrás",
+              "eje:espacio_frontal:centro focal__delante__detrás__espacio"
+            ]
+          ],
+          [
+            "delante",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:dualidad_base:delante__detrás",
+              "eje:espacio_frontal:centro focal__delante__detrás__espacio"
+            ]
+          ],
+          [
+            "trabajo",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:espacio:desplazamiento__energía__trabajo",
+              "eje:termica:calor__energía interna__trabajo",
+              "eje:tiempo:potencia__tiempo__trabajo"
+            ]
+          ],
+          [
+            "desplazamiento",
+            "concepto",
+            0,
+            null,
+            [
+              "eje:espacio:desplazamiento__energía__trabajo"
+            ]
+          ]
+        ],
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "metro por segundo"
+      },
+      "id": "velocidad"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:coordenadas__espacio__realidad": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:coordenadas__orden__orden total": {
+          "rol": "polo",
+          "opuesto": "orden total"
+        },
+        "eje:descubierta:coordenadas__negativo__signo negativo": {
+          "rol": "polo",
+          "opuesto": "signo negativo"
+        },
+        "eje:dualidad_auto:cadena totalmente ordenada__coordenadas": {
+          "rol": "polo",
+          "opuesto": "cadena totalmente ordenada"
+        },
+        "eje:descubierta:coordenada temporal__coordenadas__dilatación temporal": {
+          "rol": "polo",
+          "opuesto": "dilatación temporal"
+        },
+        "eje:descubierta:coordenada temporal__coordenada y__coordenadas": {
+          "rol": "polo",
+          "opuesto": "coordenada temporal"
+        },
+        "eje:descubierta:coordenada y__coordenadas__función inversa": {
+          "rol": "polo",
+          "opuesto": "función inversa"
+        },
+        "eje:descubierta:acarreo__coordenada y__coordenadas": {
+          "rol": "polo",
+          "opuesto": "acarreo"
+        },
+        "eje:dualidad_auto:acarreo__coordenadas": {
+          "rol": "polo",
+          "opuesto": "acarreo"
+        },
+        "eje:descubierta:coordenadas__eje coordenado__eje x": {
+          "rol": "polo",
+          "opuesto": "eje x"
+        },
+        "eje:descubierta:coordenadas__eje coordenado__estado inicial": {
+          "rol": "polo",
+          "opuesto": "estado inicial"
+        },
+        "eje:descubierta:coordenadas__diferencia__eje coordenado": {
+          "rol": "polo",
+          "opuesto": "diferencia"
+        },
+        "eje:dualidad_auto:coordenadas__dirección orientada": {
+          "rol": "polo",
+          "opuesto": "dirección orientada"
+        },
+        "eje:descubierta:componentes conexas__conexidad__coordenadas": {
+          "rol": "polo",
+          "opuesto": "componentes conexas"
+        },
+        "eje:dualidad_auto:coordenadas__trayectoria": {
+          "rol": "polo",
+          "opuesto": "trayectoria"
+        },
+        "eje:dualidad_auto:cerradura secuencial__coordenadas": {
+          "rol": "polo",
+          "opuesto": "cerradura secuencial"
+        },
+        "eje:dualidad_auto:amplitud__coordenadas": {
+          "rol": "polo",
+          "opuesto": "amplitud"
+        },
+        "eje:dualidad_auto:componentes conexas__coordenadas": {
+          "rol": "polo",
+          "opuesto": "componentes conexas"
+        },
+        "eje:descubierta:coordenadas__corriente alterna__corriente eficaz": {
+          "rol": "polo",
+          "opuesto": "corriente alterna"
+        },
+        "eje:dualidad_auto:coordenadas__impedancia": {
+          "rol": "polo",
+          "opuesto": "impedancia"
+        },
+        "eje:dualidad_auto:coordenadas__corriente alterna": {
+          "rol": "polo",
+          "opuesto": "corriente alterna"
+        }
+      },
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "espacio"
+      },
+      "nivel_conceptual": 0,
+      "id": "coordenadas"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:flecha del tiempo__realidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:flecha del tiempo__signo negativo__tiempo": {
+          "rol": "polo",
+          "opuesto": "signo negativo"
+        },
+        "eje:descubierta:bien fundado__flecha del tiempo__tiempo": {
+          "rol": "polo",
+          "opuesto": "bien fundado"
+        },
+        "eje:descubierta:flecha del tiempo__masa__masa en reposo": {
+          "rol": "polo",
+          "opuesto": "masa en reposo"
+        },
+        "eje:descubierta:flecha del tiempo__ocurrecia__sustraendo": {
+          "rol": "polo",
+          "opuesto": "sustraendo"
+        },
+        "eje:dualidad_auto:duración__flecha del tiempo": {
+          "rol": "polo",
+          "opuesto": "duración"
+        },
+        "eje:dualidad_auto:flecha del tiempo__posibilidad": {
+          "rol": "polo",
+          "opuesto": "posibilidad"
+        },
+        "eje:dualidad_auto:flecha del tiempo__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo propio"
+        },
+        "eje:descubierta:flecha del tiempo__modelado__realidad": {
+          "rol": "polo",
+          "opuesto": "modelado"
+        },
+        "eje:descubierta:flecha del tiempo__radicando__sumandos": {
+          "rol": "polo",
+          "opuesto": "sumandos"
+        },
+        "eje:dualidad_auto:acarreo__flecha del tiempo": {
+          "rol": "polo",
+          "opuesto": "acarreo"
+        },
+        "eje:descubierta:flecha del tiempo__teorema de bézout__teorema del resto": {
+          "rol": "polo",
+          "opuesto": "teorema de bézout"
+        },
+        "eje:descubierta:flecha del tiempo__tiempo de bajada__tiempo inicial": {
+          "rol": "polo",
+          "opuesto": "tiempo inicial"
+        },
+        "eje:descubierta:flecha del tiempo__respuesta al escalón__tiempo de bajada": {
+          "rol": "polo",
+          "opuesto": "respuesta al escalón"
+        },
+        "eje:descubierta:flecha del tiempo__tiempo de bajada__tiempo de subida": {
+          "rol": "polo",
+          "opuesto": "tiempo de subida"
+        },
+        "eje:descubierta:flecha del tiempo__tiempo de bajada__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo propio"
+        },
+        "eje:dualidad_auto:flecha del tiempo__tiempo inicial": {
+          "rol": "polo",
+          "opuesto": "tiempo inicial"
+        },
+        "eje:dualidad_auto:flecha del tiempo__respuesta al escalón": {
+          "rol": "polo",
+          "opuesto": "respuesta al escalón"
+        },
+        "eje:descubierta:flecha del tiempo__tiempo característico__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo propio"
+        },
+        "eje:dualidad_auto:flecha del tiempo__tiempo de asentamiento": {
+          "rol": "polo",
+          "opuesto": "tiempo de asentamiento"
+        },
+        "eje:dualidad_auto:flecha del tiempo__tiempo de respuesta": {
+          "rol": "polo",
+          "opuesto": "tiempo de respuesta"
+        }
+      },
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "temporalidad"
+      },
+      "id": "flecha del tiempo"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:descubierta:dimensión__espacio__realidad": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:dimensión__métrica__punto 2d": {
+          "rol": "equilibrio",
+          "entre": [
+            "métrica",
+            "punto 2d"
+          ]
+        },
+        "eje:descubierta:dimensionalidad__dimensión__sobreyectividad": {
+          "rol": "polo",
+          "opuesto": "sobreyectividad"
+        },
+        "eje:descubierta:dimensionalidad__dimensión__dimensión topológica": {
+          "rol": "polo",
+          "opuesto": "dimensión topológica"
+        },
+        "eje:descubierta:dimensionalidad__dimensión__dimensión de hausdorff": {
+          "rol": "polo",
+          "opuesto": "dimensión de hausdorff"
+        },
+        "eje:descubierta:dimensionalidad__dimensión__unidades de longitud": {
+          "rol": "polo",
+          "opuesto": "unidades de longitud"
+        }
+      },
+      "id": "dimensión"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:duración__realidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "realidad"
+        },
+        "eje:descubierta:duración__ocurrecia__sustraendo": {
+          "rol": "polo",
+          "opuesto": "sustraendo"
+        },
+        "eje:dualidad_auto:duración__flecha del tiempo": {
+          "rol": "polo",
+          "opuesto": "flecha del tiempo"
+        },
+        "eje:dualidad_auto:duración__tiempo propio": {
+          "rol": "polo",
+          "opuesto": "tiempo propio"
+        },
+        "eje:descubierta:duración__orden total__índice": {
+          "rol": "polo",
+          "opuesto": "orden total"
+        }
+      },
+      "id": "duración"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:delante__detrás": {
+          "rol": "polo",
+          "opuesto": "detrás"
+        },
+        "eje:espacio_frontal:centro focal__delante__detrás__espacio": {
+          "rol": "polo",
+          "opuesto": "detrás"
+        },
+        "eje:dualidad_auto:delante__izquierda": {
+          "rol": "polo",
+          "opuesto": "izquierda"
+        },
+        "eje:dualidad_auto:abajo__delante": {
+          "rol": "polo",
+          "opuesto": "abajo"
+        },
+        "eje:dualidad_auto:arriba__delante": {
+          "rol": "polo",
+          "opuesto": "arriba"
+        },
+        "eje:dualidad_auto:delante__derecha": {
+          "rol": "polo",
+          "opuesto": "derecha"
+        },
+        "eje:dualidad_detectada:delante__detrás": {
+          "rol": "polo",
+          "opuesto": "detrás"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "delante"
+    },
+    {
+      "tipo": "concepto",
+      "nivel_conceptual": 0,
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:descubierta:contingencia__incertidumbre__posibilidad": {
+          "rol": "polo",
+          "opuesto": "incertidumbre"
+        },
+        "eje:descubierta:contingencia__mundos posibles__posibilidad": {
+          "rol": "polo",
+          "opuesto": "mundos posibles"
+        },
+        "eje:descubierta:contingencia__gestación__nacimiento": {
+          "rol": "polo",
+          "opuesto": "gestación"
+        },
+        "eje:dualidad_auto:contingencia__mundos posibles": {
+          "rol": "polo",
+          "opuesto": "mundos posibles"
+        },
+        "eje:dualidad_auto:contingencia__factibilidad": {
+          "rol": "polo",
+          "opuesto": "factibilidad"
+        },
+        "eje:dualidad_auto:contingencia__diferencia": {
+          "rol": "polo",
+          "opuesto": "diferencia"
+        },
+        "eje:dualidad_auto:contingencia__incertidumbre": {
+          "rol": "polo",
+          "opuesto": "incertidumbre"
+        },
+        "eje:dualidad_auto:aproximación__contingencia": {
+          "rol": "polo",
+          "opuesto": "aproximación"
+        },
+        "eje:descubierta:aceleración__contingencia__derivada de velocidad": {
+          "rol": "polo",
+          "opuesto": "derivada de velocidad"
+        },
+        "eje:descubierta:contingencia__energía cinética__energía traslacional": {
+          "rol": "polo",
+          "opuesto": "energía traslacional"
+        },
+        "eje:dualidad_auto:acarreo__contingencia": {
+          "rol": "polo",
+          "opuesto": "acarreo"
+        },
+        "eje:dualidad_auto:contingencia__evaluación": {
+          "rol": "polo",
+          "opuesto": "evaluación"
+        },
+        "eje:dualidad_auto:contingencia__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:dualidad_auto:contingencia__fuerza neta": {
+          "rol": "polo",
+          "opuesto": "fuerza neta"
+        },
+        "eje:descubierta:contingencia__diferencia relativa__diferencial": {
+          "rol": "polo",
+          "opuesto": "diferencia relativa"
+        },
+        "eje:descubierta:contingencia__diferencia finita__diferencial": {
+          "rol": "polo",
+          "opuesto": "diferencia finita"
+        },
+        "eje:descubierta:contingencia__diferencia__diferencial": {
+          "rol": "polo",
+          "opuesto": "diferencia"
+        },
+        "eje:dualidad_auto:contingencia__diferencia finita": {
+          "rol": "polo",
+          "opuesto": "diferencia finita"
+        },
+        "eje:dualidad_auto:contingencia__diferencia relativa": {
+          "rol": "polo",
+          "opuesto": "diferencia relativa"
+        },
+        "eje:descubierta:capacitancia de membrana__contingencia__potencial de membrana": {
+          "rol": "polo",
+          "opuesto": "capacitancia de membrana"
+        },
+        "eje:descubierta:bola abierta__conjunto abierto__contingencia": {
+          "rol": "polo",
+          "opuesto": "bola abierta"
+        },
+        "eje:dualidad_auto:cadena totalmente ordenada__contingencia": {
+          "rol": "polo",
+          "opuesto": "cadena totalmente ordenada"
+        },
+        "eje:dualidad_auto:bola abierta__contingencia": {
+          "rol": "polo",
+          "opuesto": "bola abierta"
+        },
+        "eje:descubierta:contingencia__sentido antihorario__sentido del giro": {
+          "rol": "polo",
+          "opuesto": "sentido antihorario"
+        },
+        "eje:dualidad_auto:contingencia__sentido antihorario": {
+          "rol": "polo",
+          "opuesto": "sentido antihorario"
+        },
+        "eje:dualidad_auto:bien fundado__contingencia": {
+          "rol": "polo",
+          "opuesto": "bien fundado"
+        },
+        "eje:descubierta:concentración de hidronio__contingencia__ión hidronio": {
+          "rol": "polo",
+          "opuesto": "ión hidronio"
+        },
+        "eje:dualidad_auto:contingencia__destrucción de exergía": {
+          "rol": "polo",
+          "opuesto": "destrucción de exergía"
+        },
+        "eje:descubierta:contingencia__periodización espectral__plegamiento espectral": {
+          "rol": "polo",
+          "opuesto": "periodización espectral"
+        },
+        "eje:descubierta:campo de coeficientes__campo diferencial__contingencia": {
+          "rol": "polo",
+          "opuesto": "campo diferencial"
+        },
+        "eje:dualidad_auto:campo diferencial__contingencia": {
+          "rol": "polo",
+          "opuesto": "campo diferencial"
+        },
+        "eje:descubierta:conmutador con hamiltoniano__contingencia__hamiltoniano": {
+          "rol": "polo",
+          "opuesto": "hamiltoniano"
+        },
+        "eje:dualidad_auto:contingencia__hamiltoniano": {
+          "rol": "polo",
+          "opuesto": "hamiltoniano"
+        },
+        "eje:dualidad_auto:conmutador__contingencia": {
+          "rol": "polo",
+          "opuesto": "conmutador"
+        }
+      },
+      "id": "contingencia"
+    }
+  ],
+  "links": [
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:bien fundado__flecha del tiempo__tiempo",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:51",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:51",
+      "base_weight": 1.1,
+      "source": "bien fundado",
+      "target": "tiempo"
+    },
+    {
+      "weight": 1.6099999999999999,
+      "tipo": "relacion_fuerte",
+      "color": "#cccccc",
+      "axis": "eje:transversal:flecha del tiempo__tiempo propio",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:37",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo propio",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:14:05",
+      "base_weight": 0.2,
+      "source": "tiempo propio",
+      "target": "flecha del tiempo"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:37",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo propio",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 0.2,
+      "source": "tiempo propio",
+      "target": "signo negativo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:realidad__tiempo__tiempo propio",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:51",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:51",
+      "base_weight": 1.1,
+      "source": "tiempo propio",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:potencia__tiempo__trabajo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "trabajo",
+      "target": "potencia"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:calor__energía interna__trabajo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "trabajo",
+      "target": "energía interna"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:20:11",
+      "run_id": "20260111_131042",
+      "origin_node": "trabajo",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:20:11",
+      "base_weight": 0.2,
+      "source": "trabajo",
+      "target": "acarreo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:aceleración__tiempo__velocidad",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "aceleración",
+      "target": "velocidad"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:aceleración__tiempo__velocidad",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "aceleración",
+      "target": "tiempo"
+    },
+    {
+      "weight": 1.6,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:aceleración__contingencia__derivada de velocidad",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:24:09",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:24:30",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "aceleración",
+      "source": "aceleración",
+      "target": "derivada de velocidad"
+    },
+    {
+      "weight": 1.6,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:aceleración__derivada de velocidad__fuerza neta",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:24:10",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:24:30",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "aceleración",
+      "source": "aceleración",
+      "target": "fuerza neta"
+    },
+    {
+      "weight": 1.6,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:acarreo__aceleración__derivada de velocidad",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:24:10",
+      "run_id": "20260111_131042",
+      "origin_node": "aceleración",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:24:30",
+      "base_weight": 0.2,
+      "source": "aceleración",
+      "target": "acarreo"
+    },
+    {
+      "weight": 1.6,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:aceleración__contingencia__derivada de velocidad",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:24:10",
+      "run_id": "20260111_131042",
+      "origin_node": "aceleración",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:24:30",
+      "base_weight": 0.2,
+      "source": "aceleración",
+      "target": "contingencia"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:coordenadas__espacio__realidad",
+      "base_weight": 1.8,
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:09",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:09",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "source": "realidad",
+      "target": "espacio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:dilatación temporal__realidad__tiempo",
+      "base_weight": 1.8,
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:51",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:51",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "source": "realidad",
+      "target": "tiempo"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:flecha del tiempo__modelado__realidad",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:16:48",
+      "run_id": "20260111_131042",
+      "origin_node": "realidad",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:17:10",
+      "base_weight": 1.6,
+      "source": "realidad",
+      "target": "flecha del tiempo"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:tiempo:centro focal__consciencia__presente",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "centro focal",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "centro focal",
+      "target": "presente"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "centro focal",
+      "target": "arriba"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "centro focal",
+      "target": "abajo"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "centro focal",
+      "target": "espacio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "centro focal",
+      "target": "izquierda"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "goldenrod",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "centro focal",
+      "target": "derecha"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "goldenrod",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_frontal:centro focal__delante__detrás__espacio",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "centro focal",
+      "target": "delante"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "goldenrod",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_frontal:centro focal__delante__detrás__espacio",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "centro focal",
+      "target": "detrás"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:acarreo__aceleración__derivada de velocidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:24:30",
+      "run_id": "20260111_131042",
+      "origin_node": "aceleración",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:24:30",
+      "base_weight": 1.1,
+      "source": "acarreo",
+      "target": "aceleración"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:24:10",
+      "run_id": "20260111_131042",
+      "origin_node": "fuerza neta",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:24:10",
+      "base_weight": 0.2,
+      "source": "fuerza neta",
+      "target": "flecha del tiempo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:aceleración__derivada de velocidad__fuerza neta",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:24:30",
+      "run_id": "20260111_131042",
+      "origin_node": "aceleración",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:24:30",
+      "base_weight": 1.1,
+      "source": "fuerza neta",
+      "target": "aceleración"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_auto:derivada de velocidad__fuerza neta",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:25:48",
+      "run_id": "20260111_131042",
+      "origin_node": "fuerza neta",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:25:48",
+      "base_weight": 2.5,
+      "source": "fuerza neta",
+      "target": "derivada de velocidad"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_base:espacio__tiempo",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "base_weight": 1.2,
+      "source": "espacio",
+      "target": "tiempo"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:coordenadas__espacio__realidad",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:10:52",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "source": "espacio",
+      "target": "realidad"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:espacio__relatividad__tiempo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "espacio",
+      "target": "relatividad"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:14:05",
+      "source": "espacio",
+      "target": "arriba"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "espacio",
+      "target": "centro focal"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "espacio",
+      "target": "abajo"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "espacio",
+      "target": "izquierda"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "espacio",
+      "target": "derecha"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_frontal:centro focal__delante__detrás__espacio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "espacio",
+      "target": "delante"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_frontal:centro focal__delante__detrás__espacio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "espacio",
+      "target": "detrás"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:distancia__espacio__realidad",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:11:08",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "source": "espacio",
+      "target": "distancia"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:espacio__espacio vectorial__realidad",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:11:08",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "source": "espacio",
+      "target": "espacio vectorial"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:espacio__métrica__realidad",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:11:08",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "source": "espacio",
+      "target": "métrica"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:dimensión__espacio__realidad",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:11:08",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "source": "espacio",
+      "target": "dimensión"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:coordenadas__espacio__realidad",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:11:09",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 0.2,
+      "source": "espacio",
+      "target": "coordenadas"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:13",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:12:13",
+      "base_weight": 0.2,
+      "source": "espacio",
+      "target": "bien fundado"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:13",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:12:13",
+      "base_weight": 0.2,
+      "source": "espacio",
+      "target": "signo negativo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tibio",
+      "target": "calor"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tibio",
+      "target": "frío"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tibio",
+      "target": "temperatura"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_base:futuro__pasado",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "pasado",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "pasado",
+      "target": "futuro"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "pasado",
+      "target": "presente"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "pasado",
+      "target": "tiempo"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:11:47",
+      "run_id": "20260111_131042",
+      "origin_node": "pasado",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:11:47",
+      "base_weight": 0.2,
+      "source": "pasado",
+      "target": "bien fundado"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:11:47",
+      "run_id": "20260111_131042",
+      "origin_node": "pasado",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:11:47",
+      "base_weight": 0.2,
+      "source": "pasado",
+      "target": "coordenadas"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_base:derecha__izquierda",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "derecha",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "derecha",
+      "target": "izquierda"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "goldenrod",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "derecha",
+      "target": "centro focal"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "derecha",
+      "target": "espacio"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_auto:abajo__derecha",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:11:09",
+      "run_id": "20260111_131042",
+      "origin_node": "derecha",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:11:09",
+      "base_weight": 2.5,
+      "source": "derecha",
+      "target": "abajo"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:delante__derecha",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "derecha",
+      "target": "delante"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:arriba__derecha",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "derecha",
+      "target": "arriba"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:derecha__detrás",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "derecha",
+      "target": "detrás"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_base:derecha__izquierda",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "izquierda",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "izquierda",
+      "target": "derecha"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "izquierda",
+      "target": "centro focal"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "izquierda",
+      "target": "espacio"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_auto:delante__izquierda",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:11:09",
+      "run_id": "20260111_131042",
+      "origin_node": "izquierda",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:11:09",
+      "base_weight": 2.5,
+      "source": "izquierda",
+      "target": "delante"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:detrás__izquierda",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "izquierda",
+      "target": "detrás"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:abajo__izquierda",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "izquierda",
+      "target": "abajo"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:arriba__izquierda",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "izquierda",
+      "target": "arriba"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:11:08",
+      "run_id": "20260111_131042",
+      "origin_node": "distancia",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:11:08",
+      "base_weight": 0.2,
+      "source": "distancia",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:distancia__espacio__realidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:09",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:09",
+      "base_weight": 1.1,
+      "source": "distancia",
+      "target": "espacio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:potencia__tiempo__trabajo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "potencia",
+      "target": "trabajo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:potencia__tiempo__trabajo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "potencia",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_base:futuro__pasado",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "futuro",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "futuro",
+      "target": "pasado"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "futuro",
+      "target": "presente"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "futuro",
+      "target": "tiempo"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:20:28",
+      "run_id": "20260111_131042",
+      "origin_node": "futuro",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:20:28",
+      "base_weight": 0.2,
+      "source": "futuro",
+      "target": "flecha del tiempo"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:20:28",
+      "run_id": "20260111_131042",
+      "origin_node": "futuro",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:20:28",
+      "base_weight": 0.2,
+      "source": "futuro",
+      "target": "tiempo propio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:posición__tiempo__velocidad",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "posición",
+      "target": "velocidad"
+    },
+    {
+      "weight": 1.6,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:intervalo temporal__métrica__tiempo",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:37",
+      "run_id": "20260111_131042",
+      "origin_node": "intervalo temporal",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:52",
+      "base_weight": 0.2,
+      "source": "intervalo temporal",
+      "target": "tiempo"
+    },
+    {
+      "weight": 1.6,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:intervalo temporal__métrica__tiempo",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:37",
+      "run_id": "20260111_131042",
+      "origin_node": "intervalo temporal",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:52",
+      "base_weight": 0.2,
+      "source": "intervalo temporal",
+      "target": "métrica"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_base:espacio__tiempo",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "tiempo",
+      "target": "espacio"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:dilatación temporal__realidad__tiempo",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:10:52",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "source": "tiempo",
+      "target": "realidad"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:posición__tiempo__velocidad",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tiempo",
+      "target": "velocidad"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:aceleración__tiempo__velocidad",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tiempo",
+      "target": "aceleración"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:potencia__tiempo__trabajo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tiempo",
+      "target": "potencia"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:espacio__relatividad__tiempo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tiempo",
+      "target": "relatividad"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tiempo",
+      "target": "pasado"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tiempo",
+      "target": "presente"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tiempo",
+      "target": "futuro"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:bien fundado__flecha del tiempo__tiempo",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:12:36",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "source": "tiempo",
+      "target": "flecha del tiempo"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:duración__realidad__tiempo",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:12:36",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "source": "tiempo",
+      "target": "duración"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:intervalo temporal__métrica__tiempo",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:12:37",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:52",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "source": "tiempo",
+      "target": "intervalo temporal"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:realidad__tiempo__tiempo propio",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:12:37",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "source": "tiempo",
+      "target": "tiempo propio"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:dilatación temporal__realidad__tiempo",
+      "created_by": "normalizar_edges_sin_tipo",
+      "created_at": "2026-01-11T13:12:37",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "source": "tiempo",
+      "target": "dilatación temporal"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:flecha del tiempo__signo negativo__tiempo",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:37",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "source": "tiempo",
+      "target": "signo negativo"
+    },
+    {
+      "weight": 1.1,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:bien fundado__flecha del tiempo__tiempo",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:37",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "source": "tiempo",
+      "target": "bien fundado"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_base:calor__frío",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "frío",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "frío",
+      "target": "calor"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "frío",
+      "target": "tibio"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:20",
+      "source": "frío",
+      "target": "temperatura"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:13:06",
+      "run_id": "20260111_131042",
+      "origin_node": "frío",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "source": "frío",
+      "target": "tiempo propio"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:13:06",
+      "run_id": "20260111_131042",
+      "origin_node": "frío",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "source": "frío",
+      "target": "flecha del tiempo"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:13:06",
+      "run_id": "20260111_131042",
+      "origin_node": "frío",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:13:06",
+      "base_weight": 0.2,
+      "source": "frío",
+      "target": "bien fundado"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_base:calor__frío",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "calor",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "calor",
+      "target": "frío"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "calor",
+      "target": "tibio"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "calor",
+      "target": "temperatura"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:calor__energía interna__trabajo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "calor",
+      "target": "energía interna"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:flecha del tiempo__signo negativo__tiempo",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:51",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:51",
+      "base_weight": 1.1,
+      "source": "signo negativo",
+      "target": "tiempo"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:11:08",
+      "run_id": "20260111_131042",
+      "origin_node": "métrica",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:11:08",
+      "base_weight": 0.2,
+      "source": "métrica",
+      "target": "espacio vectorial"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:11:08",
+      "run_id": "20260111_131042",
+      "origin_node": "métrica",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:11:08",
+      "base_weight": 0.2,
+      "source": "métrica",
+      "target": "distancia"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:espacio__métrica__realidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:09",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:09",
+      "base_weight": 1.1,
+      "source": "métrica",
+      "target": "espacio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:dimensión__métrica__punto 2d",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:10",
+      "run_id": "20260111_131042",
+      "origin_node": "dimensión",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:10",
+      "base_weight": 1.1,
+      "source": "métrica",
+      "target": "dimensión"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:intervalo temporal__métrica__tiempo",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:52",
+      "run_id": "20260111_131042",
+      "origin_node": "intervalo temporal",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:52",
+      "base_weight": 1.1,
+      "source": "métrica",
+      "target": "intervalo temporal"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:tiempo:centro focal__consciencia__presente",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "presente",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "presente",
+      "target": "centro focal"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "presente",
+      "target": "pasado"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "presente",
+      "target": "futuro"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:tiempo:futuro__pasado__presente__tiempo",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "presente",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:termica:calor__energía interna__trabajo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "energía interna",
+      "target": "calor"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:termica:calor__energía interna__trabajo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "energía interna",
+      "target": "trabajo"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_base:abajo__arriba",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "abajo",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "abajo",
+      "target": "arriba"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "abajo",
+      "target": "centro focal"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "abajo",
+      "target": "espacio"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_auto:abajo__derecha",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:11:09",
+      "run_id": "20260111_131042",
+      "origin_node": "abajo",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:11:09",
+      "base_weight": 2.5,
+      "source": "abajo",
+      "target": "derecha"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:abajo__izquierda",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "abajo",
+      "target": "izquierda"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:abajo__detrás",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "abajo",
+      "target": "detrás"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:abajo__delante",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "abajo",
+      "target": "delante"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:37",
+      "run_id": "20260111_131042",
+      "origin_node": "dilatación temporal",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 0.2,
+      "source": "dilatación temporal",
+      "target": "intervalo temporal"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:dilatación temporal__realidad__tiempo",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:51",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:51",
+      "base_weight": 1.1,
+      "source": "dilatación temporal",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_base:abajo__arriba",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "arriba",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "arriba",
+      "target": "abajo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "arriba",
+      "target": "centro focal"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_vertical:abajo__arriba__centro focal__espacio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:14:05",
+      "source": "arriba",
+      "target": "espacio"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:arriba__derecha",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "arriba",
+      "target": "derecha"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:arriba__delante",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "arriba",
+      "target": "delante"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:arriba__detrás",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "arriba",
+      "target": "detrás"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:arriba__izquierda",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "arriba",
+      "target": "izquierda"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "presión",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "presión",
+      "target": "volumen"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "presión",
+      "target": "temperatura"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "volumen",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "volumen",
+      "target": "presión"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "volumen",
+      "target": "temperatura"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_base:delante__detrás",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "detrás",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "detrás",
+      "target": "delante"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "goldenrod",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_frontal:centro focal__delante__detrás__espacio",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "detrás",
+      "target": "centro focal"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_frontal:centro focal__delante__detrás__espacio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "detrás",
+      "target": "espacio"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:detrás__izquierda",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "detrás",
+      "target": "izquierda"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:abajo__detrás",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "detrás",
+      "target": "abajo"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:derecha__detrás",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "detrás",
+      "target": "derecha"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:arriba__detrás",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "detrás",
+      "target": "arriba"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:espacio__espacio vectorial__realidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:09",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:09",
+      "base_weight": 1.1,
+      "source": "espacio vectorial",
+      "target": "espacio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:aceleración__contingencia__derivada de velocidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:24:30",
+      "run_id": "20260111_131042",
+      "origin_node": "aceleración",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:24:30",
+      "base_weight": 1.1,
+      "source": "derivada de velocidad",
+      "target": "aceleración"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_auto:derivada de velocidad__fuerza neta",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:25:48",
+      "run_id": "20260111_131042",
+      "origin_node": "derivada de velocidad",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:25:48",
+      "base_weight": 2.5,
+      "source": "derivada de velocidad",
+      "target": "fuerza neta"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "temperatura",
+      "target": "presión"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "temperatura",
+      "target": "volumen"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "temperatura",
+      "target": "calor"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "temperatura",
+      "target": "tibio"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:20",
+      "source": "temperatura",
+      "target": "frío"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:espacio__relatividad__tiempo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "relatividad",
+      "target": "espacio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:espacio__relatividad__tiempo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "relatividad",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:posición__tiempo__velocidad",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "velocidad",
+      "target": "posición"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:posición__tiempo__velocidad",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "velocidad",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:aceleración__tiempo__velocidad",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "velocidad",
+      "target": "aceleración"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:coordenadas__espacio__realidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:09",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:09",
+      "base_weight": 1.1,
+      "source": "coordenadas",
+      "target": "espacio"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:36",
+      "run_id": "20260111_131042",
+      "origin_node": "flecha del tiempo",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:12:36",
+      "base_weight": 0.2,
+      "source": "flecha del tiempo",
+      "target": "bien fundado"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:bien fundado__flecha del tiempo__tiempo",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:51",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:51",
+      "base_weight": 1.1,
+      "source": "flecha del tiempo",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:transversal:flecha del tiempo__tiempo propio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:14:05",
+      "source": "flecha del tiempo",
+      "target": "tiempo propio"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_auto:duración__flecha del tiempo",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:14:39",
+      "run_id": "20260111_131042",
+      "origin_node": "flecha del tiempo",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:14:39",
+      "base_weight": 2.5,
+      "source": "flecha del tiempo",
+      "target": "duración"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:flecha del tiempo__modelado__realidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:16:56",
+      "run_id": "20260111_131042",
+      "origin_node": "realidad",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:16:56",
+      "base_weight": 1.1,
+      "source": "flecha del tiempo",
+      "target": "realidad"
+    },
+    {
+      "weight": 1.6,
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "axis": "eje:descubierta:dimensión__métrica__punto 2d",
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:11:08",
+      "run_id": "20260111_131042",
+      "origin_node": "dimensión",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:10",
+      "base_weight": 0.2,
+      "source": "dimensión",
+      "target": "métrica"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:descubierta:dimensión__espacio__realidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:09",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "base_weight": 1.1,
+      "source": "dimensión",
+      "target": "espacio"
+    },
+    {
+      "weight": 0.2,
+      "tipo": "embedding",
+      "color": "#cccccc",
+      "axis": null,
+      "created_by": "expandir_concepto_embedding",
+      "created_at": "2026-01-11T13:12:36",
+      "run_id": "20260111_131042",
+      "origin_node": "duración",
+      "updated_by": "expandir_concepto_embedding",
+      "updated_at": "2026-01-11T13:12:36",
+      "base_weight": 0.2,
+      "source": "duración",
+      "target": "distancia"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:duración__realidad__tiempo",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:12:51",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:12:51",
+      "base_weight": 1.1,
+      "source": "duración",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_auto:duración__flecha del tiempo",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:14:39",
+      "run_id": "20260111_131042",
+      "origin_node": "duración",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:14:39",
+      "base_weight": 2.5,
+      "source": "duración",
+      "target": "flecha del tiempo"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_base:delante__detrás",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "delante",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "delante",
+      "target": "detrás"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "goldenrod",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_frontal:centro focal__delante__detrás__espacio",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:06",
+      "source": "delante",
+      "target": "centro focal"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:espacio_frontal:centro focal__delante__detrás__espacio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "delante",
+      "target": "espacio"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_auto:delante__izquierda",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:11:09",
+      "run_id": "20260111_131042",
+      "origin_node": "delante",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:11:09",
+      "base_weight": 2.5,
+      "source": "delante",
+      "target": "izquierda"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:delante__derecha",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "delante",
+      "target": "derecha"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:abajo__delante",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "delante",
+      "target": "abajo"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "weight": 1.6099999999999999,
+      "axis": "eje:dualidad_auto:arriba__delante",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:12:37",
+      "source": "delante",
+      "target": "arriba"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:descubierta:aceleración__contingencia__derivada de velocidad",
+      "created_by": "detectar_triadas_desde_semantica",
+      "created_at": "2026-01-11T13:24:30",
+      "run_id": "20260111_131042",
+      "origin_node": "aceleración",
+      "updated_by": "detectar_triadas_desde_semantica",
+      "updated_at": "2026-01-11T13:24:30",
+      "base_weight": 1.1,
+      "source": "contingencia",
+      "target": "aceleración"
+    }
+  ]
+}
