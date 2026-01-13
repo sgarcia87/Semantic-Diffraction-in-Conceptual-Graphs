@@ -102,6 +102,36 @@ Research prototypes combining symbolic + neural representations
 Conceptual geometry / philosophy of AI experiments
 Structural sanity checks after long autonomous expansions
 
+
+#############################################################################
+Reproducibility
+This repository includes two curated datasets that allow direct verification of the auditor’s behavior under controlled conditions.
+
+Demo graph (minimal, canonical)
+The demo graph is a compact, noise-free semantic graph designed to showcase the core capabilities of the auditor: equilibrium detection and synthesis emergence under strict structural constraints.
+python3 test5.py --json data/red_fractal_demo.json --a "frío" --b "calor" --sintesis --modo estructura
+python3 test5.py --json data/red_fractal_demo.json --a "espacio" --b "tiempo" --modo estructura
+Expected behavior:
+frío / calor → equilibrium tibio → synthesis temperatura
+espacio / tiempo → stable equilibrium relatividad
+
+
+Sample graph (stress-test, realistic structure)
+The sample graph contains multiple interacting axes, mild structural noise, and non-trivial topology. It is intended to validate stability criteria, axis filtering, and robustness beyond the minimal demo.
+python3 test5.py --json data/red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
+python3 test5.py --json data/red_fractal_sample.json --a "frío" --b "calor" --sintesis --modo estructura
+Expected behavior:
+Stable equilibrium relatividad for espacio / tiempo
+Stable equilibrium tibio and synthesis temperatura for frío / calor
+Axis-based filtering active
+No meta-concept drift under structural mode
+
+Notes on reproducibility
+All results are obtained using structure-only propagation (no embeddings).
+Axis/role metadata is essential for reproducibility.
+Both datasets are automatically extracted from a larger IA_m graph using the same auditing logic provided in this repository.
+
+
 📦 License
 Apache License 2.0
 Chosen to encourage open research, reproducibility, and safe industrial adoption while protecting authorship and patent rights.
