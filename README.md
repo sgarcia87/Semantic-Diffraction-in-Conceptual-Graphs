@@ -118,8 +118,8 @@ espacio / tiempo → stable equilibrium relatividad
 
 Sample graph (stress-test, realistic structure)
 The sample graph contains multiple interacting axes, mild structural noise, and non-trivial topology. It is intended to validate stability criteria, axis filtering, and robustness beyond the minimal demo.
-python3 test5.py --json data/red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
-python3 test5.py --json data/red_fractal_sample.json --a "frío" --b "calor" --sintesis --modo estructura
+python3 audit.py --json data/red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
+python3 audit.py --json data/red_fractal_sample.json --a "frío" --b "calor" --sintesis --modo estructura
 Expected behavior:
 Stable equilibrium relatividad for espacio / tiempo
 Stable equilibrium tibio and synthesis temperatura for frío / calor
