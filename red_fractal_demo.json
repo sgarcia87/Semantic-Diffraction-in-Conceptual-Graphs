@@ -1,0 +1,647 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "tipo_global": "sintesis",
+      "nivel_global": 3,
+      "roles": {
+        "eje:dualidad_base:espacio__tiempo": {
+          "rol": "polo",
+          "opuesto": "espacio"
+        },
+        "eje:tiempo:posición__tiempo__velocidad": {
+          "rol": "polo",
+          "opuesto": "posición"
+        },
+        "eje:tiempo:aceleración__tiempo__velocidad": {
+          "rol": "polo",
+          "opuesto": "velocidad"
+        },
+        "eje:tiempo:potencia__tiempo__trabajo": {
+          "rol": "polo",
+          "opuesto": "trabajo"
+        },
+        "eje:tiempo:espacio__relatividad__tiempo": {
+          "rol": "polo",
+          "opuesto": "espacio"
+        },
+        "eje:tiempo:futuro__pasado__presente__tiempo": {
+          "rol": "sintesis",
+          "de": [
+            "pasado",
+            "presente",
+            "futuro"
+          ]
+        },
+        "eje:dualidad_auto:tiempo__trabajo": {
+          "rol": "polo",
+          "opuesto": "trabajo"
+        },
+        "eje:dualidad_auto:posición__tiempo": {
+          "rol": "polo",
+          "opuesto": "posición"
+        },
+        "eje:dualidad_detectada:espacio__tiempo": {
+          "rol": "polo",
+          "opuesto": "espacio"
+        },
+        "eje:descubierta:flecha del tiempo__realidad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "flecha del tiempo"
+          ]
+        },
+        "eje:descubierta:duración__realidad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "duración"
+          ]
+        },
+        "eje:descubierta:intervalo temporal__realidad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "intervalo temporal"
+          ]
+        },
+        "eje:descubierta:realidad__tiempo__tiempo propio": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "tiempo propio"
+          ]
+        },
+        "eje:descubierta:dilatación temporal__realidad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "dilatación temporal"
+          ]
+        },
+        "eje:descubierta:flecha del tiempo__signo negativo__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "flecha del tiempo",
+            "signo negativo"
+          ]
+        },
+        "eje:descubierta:bien fundado__flecha del tiempo__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "flecha del tiempo",
+            "bien fundado"
+          ]
+        },
+        "eje:descubierta:intervalo temporal__métrica__tiempo": {
+          "rol": "polo",
+          "opuesto": "métrica"
+        },
+        "eje:dualidad_auto:métrica__tiempo": {
+          "rol": "polo",
+          "opuesto": "métrica"
+        },
+        "eje:dualidad_auto:fuerza neta__tiempo": {
+          "rol": "polo",
+          "opuesto": "fuerza neta"
+        },
+        "eje:dualidad_auto:acarreo__tiempo": {
+          "rol": "polo",
+          "opuesto": "acarreo"
+        },
+        "eje:dualidad_auto:contingencia__tiempo": {
+          "rol": "polo",
+          "opuesto": "contingencia"
+        },
+        "eje:dualidad_auto:derivada de velocidad__tiempo": {
+          "rol": "polo",
+          "opuesto": "derivada de velocidad"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "tiempo"
+    },
+    {
+      "tipo_global": "sintesis",
+      "nivel_global": 3,
+      "roles": {
+        "eje:termica:presión__temperatura__volumen": {
+          "rol": "equilibrio",
+          "entre": [
+            "presión",
+            "volumen"
+          ]
+        },
+        "eje:termica:calor__frío__temperatura__tibio": {
+          "rol": "sintesis",
+          "de": [
+            "calor",
+            "tibio",
+            "frío"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "kan_ambiguo": true,
+        "kan_ambiguo_tema": "frío"
+      },
+      "id": "temperatura"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:tiempo:espacio__relatividad__tiempo": {
+          "rol": "equilibrio",
+          "entre": [
+            "espacio",
+            "tiempo"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "relatividad"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:calor__frío": {
+          "rol": "polo",
+          "opuesto": "frío"
+        },
+        "eje:termica:calor__frío__temperatura__tibio": {
+          "rol": "polo",
+          "opuesto": "frío"
+        },
+        "eje:termica:calor__energía interna__trabajo": {
+          "rol": "polo",
+          "opuesto": "trabajo"
+        },
+        "eje:dualidad_detectada:calor__frío": {
+          "rol": "polo",
+          "opuesto": "frío"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "calor"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:termica:presión__temperatura__volumen": {
+          "rol": "polo",
+          "opuesto": "volumen"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "presión"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:termica:presión__temperatura__volumen": {
+          "rol": "polo",
+          "opuesto": "presión"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "volumen"
+    },
+    {
+      "tipo_global": "sintesis",
+      "nivel_global": 3,
+      "roles": {
+        "eje:dualidad_base:espacio__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:tiempo:espacio__relatividad__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:espacio_vertical:abajo__arriba__centro focal__espacio": {
+          "rol": "sintesis",
+          "de": [
+            "arriba",
+            "centro focal",
+            "abajo"
+          ]
+        },
+        "eje:espacio_horizontal:centro focal__derecha__espacio__izquierda": {
+          "rol": "sintesis",
+          "de": [
+            "izquierda",
+            "centro focal",
+            "derecha"
+          ]
+        },
+        "eje:espacio_frontal:centro focal__delante__detrás__espacio": {
+          "rol": "sintesis",
+          "de": [
+            "delante",
+            "centro focal",
+            "detrás"
+          ]
+        },
+        "eje:dualidad_detectada:espacio__tiempo": {
+          "rol": "polo",
+          "opuesto": "tiempo"
+        },
+        "eje:descubierta:distancia__espacio__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "distancia"
+          ]
+        },
+        "eje:descubierta:espacio__espacio vectorial__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "espacio vectorial"
+          ]
+        },
+        "eje:descubierta:espacio__métrica__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "métrica"
+          ]
+        },
+        "eje:descubierta:dimensión__espacio__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "dimensión"
+          ]
+        },
+        "eje:descubierta:coordenadas__espacio__realidad": {
+          "rol": "equilibrio",
+          "entre": [
+            "realidad",
+            "coordenadas"
+          ]
+        },
+        "eje:dualidad_auto:espacio__métrica": {
+          "rol": "polo",
+          "opuesto": "métrica"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "espacio"
+    },
+    {
+      "tipo_global": "concepto",
+      "nivel_global": 0,
+      "roles": {
+        "eje:dualidad_base:calor__frío": {
+          "rol": "polo",
+          "opuesto": "calor"
+        },
+        "eje:termica:calor__frío__temperatura__tibio": {
+          "rol": "polo",
+          "opuesto": "calor"
+        },
+        "eje:dualidad_detectada:calor__frío": {
+          "rol": "polo",
+          "opuesto": "calor"
+        }
+      },
+      "nivel_conceptual": 0,
+      "id": "frío"
+    },
+    {
+      "tipo_global": "equilibrio",
+      "nivel_global": 2,
+      "roles": {
+        "eje:termica:calor__frío__temperatura__tibio": {
+          "rol": "equilibrio",
+          "entre": [
+            "calor",
+            "frío"
+          ]
+        }
+      },
+      "nivel_conceptual": 0,
+      "flags": {
+        "difraccion_auditado": true,
+        "difraccion_estable": true,
+        "difraccion_pass": "pass1",
+        "difraccion_ts": 1768133461.258948,
+        "difraccion_pareja": [
+          "calor",
+          "frío"
+        ],
+        "difraccion_eq_sugerido": "tibio",
+        "difraccion_stats": {
+          "score_top1": 0.21639257469363973,
+          "balance": 0.04627939759335538
+        }
+      },
+      "id": "tibio"
+    }
+  ],
+  "links": [
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_base:espacio__tiempo",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "tiempo",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "tiempo",
+      "target": "espacio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:espacio__relatividad__tiempo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tiempo",
+      "target": "relatividad"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "temperatura",
+      "target": "presión"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "temperatura",
+      "target": "volumen"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "temperatura",
+      "target": "calor"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "temperatura",
+      "target": "tibio"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 2.0,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:20",
+      "source": "temperatura",
+      "target": "frío"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:espacio__relatividad__tiempo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "relatividad",
+      "target": "espacio"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:tiempo:espacio__relatividad__tiempo",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "relatividad",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:dualidad_base:calor__frío",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "calor",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "calor",
+      "target": "frío"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "calor",
+      "target": "tibio"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "calor",
+      "target": "temperatura"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "presión",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "presión",
+      "target": "volumen"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "presión",
+      "target": "temperatura"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "green",
+      "weight": 2.5,
+      "direccion": "positivo_a_negativo",
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "volumen",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "volumen",
+      "target": "presión"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:presión__temperatura__volumen",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "volumen",
+      "target": "temperatura"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_base:espacio__tiempo",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "espacio",
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "base_weight": 1.2,
+      "source": "espacio",
+      "target": "tiempo"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:tiempo:espacio__relatividad__tiempo",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "espacio",
+      "target": "relatividad"
+    },
+    {
+      "tipo": "dualidad",
+      "color": "red",
+      "weight": 2.5,
+      "direccion": "negativo_a_positivo",
+      "axis": "eje:dualidad_base:calor__frío",
+      "created_by": "agregar_dualidad",
+      "created_at": "2026-01-11T13:10:52",
+      "run_id": "20260111_131042",
+      "origin_node": "frío",
+      "updated_by": "agregar_dualidad",
+      "updated_at": "2026-01-11T13:10:52",
+      "base_weight": 2.5,
+      "source": "frío",
+      "target": "calor"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.1,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.2,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "frío",
+      "target": "tibio"
+    },
+    {
+      "tipo": "relacion_fuerte",
+      "color": "gold",
+      "weight": 1.6099999999999999,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:13:20",
+      "source": "frío",
+      "target": "temperatura"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tibio",
+      "target": "calor"
+    },
+    {
+      "tipo": "equilibrio",
+      "color": "goldenrod",
+      "weight": 1.6,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.8,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tibio",
+      "target": "frío"
+    },
+    {
+      "tipo": "sintesis",
+      "color": "gold",
+      "weight": 1.8,
+      "axis": "eje:termica:calor__frío__temperatura__tibio",
+      "base_weight": 1.5,
+      "updated_by": "ajustar_pesos_conexiones_v2",
+      "updated_at": "2026-01-11T13:11:08",
+      "source": "tibio",
+      "target": "temperatura"
+    }
+  ]
+}
