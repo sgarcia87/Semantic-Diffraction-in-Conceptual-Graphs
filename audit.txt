@@ -157,7 +157,7 @@ EJEMPLOS DE USO:
 (Auditoría estructural pura)
 Pregunta IA_m
 ¿“tiempo–posición” está realmente construido en la geometría o solo sugerido por embeddings?
-Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --modo estructura --refine
+Comando: python3 audit.py --json json/red_fractal.json --a "tiempo" --b "posición" --modo estructura --refine
 
 Qué mirar
 ¿Sale un equilibrio único?
@@ -173,7 +173,7 @@ Diagnóstico
 (Detección de drift estructural)
 Pregunta IA_m
 ¿Conceptos como “síntesis / tesis / antítesis” se cuelan donde no deben?
-Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --no_axis --modo estructura
+Comando: python3 audit.py --json json/red_fractal.json --a "tiempo" --b "posición" --no_axis --modo estructura
 
 Qué mirar
 Aparición de nodos genéricos arriba del ranking
@@ -188,7 +188,7 @@ Sirve para detectar sumideros conceptuales en la red
 (Radiografía de un eje concreto)
 Pregunta IA_m
 ¿El eje “posición–tiempo–velocidad” contiene más que un solo nodo?
-Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --axis_only "eje:tiempo:posición__tiempo__velocidad" --modo estructura --top 30
+Comando: python3 audit.py --json json/red_fractal.json --a "tiempo" --b "posición" --axis_only "eje:tiempo:posición__tiempo__velocidad" --modo estructura --top 30
 
 Qué mirar
 Número de candidatos
@@ -203,7 +203,7 @@ Aparecen “movimiento”, “trayectoria”… → eje sano
 (Síntesis fuerte, no semántica)
 Pregunta IA_m
 ¿Existe una síntesis estructural real o solo una intuición conceptual?
-Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo estructura
+Comando: python3 audit.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo estructura
 
 Qué mirar
 ¿Aparece síntesis?
@@ -221,9 +221,9 @@ Pregunta IA_m
 ¿Este concepto emergente está “entendido” pero no “construido”?
 Comandos:
 # estructura
-python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo estructura
+python3 audit.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo estructura
 # mixto
-python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo mixto
+python3 audit.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo mixto
 
 Diagnóstico
 Sale solo en mixto → promocionar a estructura
@@ -236,7 +236,7 @@ Sale en ambos → estructura sólida
 (Auditoría fina de equilibrio)
 Pregunta IA_m
 ¿Este equilibrio está realmente entre A y B o es casi un polo?
-Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --balance_max 0.5 --refine --modo estructura
+Comando: python3 audit.py --json json/red_fractal.json --a "tiempo" --b "posición" --balance_max 0.5 --refine --modo estructura
 
 Qué mirar
 Si deja de ser estable al bajar balance_max
@@ -250,7 +250,7 @@ Sigue estable → centro fuerte
 (Ejes implícitos vs explícitos)
 Pregunta IA_m
 ¿A y B no comparten ejes, pero el sistema puede reconstruir uno?
-Comando: python3 test5.py --json json/red_fractal.json --a "concepto_A" --b "concepto_B" --refine --modo estructura
+Comando: python3 audit.py --json json/red_fractal.json --a "concepto_A" --b "concepto_B" --refine --modo estructura
 
 Qué mirar
 Diferencia entre pass1 y pass2
@@ -264,10 +264,10 @@ Pass2 no mejora → red mal conectada
 Después de 24–48h de expansión automática:
 Checklist mínimo
 # 1. Pares críticos
-python3 test5.py --json json/red_fractal.json --a "tiempo" --b "espacio" --refine --modo estructura
-python3 test5.py --json json/red_fractal.json --a "frío" --b "calor" --sintesis --refine --modo estructura
+python3 audit.py --json json/red_fractal.json --a "tiempo" --b "espacio" --refine --modo estructura
+python3 audit.py --json json/red_fractal.json --a "frío" --b "calor" --sintesis --refine --modo estructura
 # 2. Drift global
-python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --no_axis --modo estructura
+python3 audit.py --json json/red_fractal.json --a "tiempo" --b "posición" --no_axis --modo estructura
 👉 Si esto pasa limpio, IA_m está sana.
 
 🧠 Resumen conceptual (IA_m)
