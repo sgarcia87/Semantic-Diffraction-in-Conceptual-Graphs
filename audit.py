@@ -474,8 +474,19 @@ def main():
     #    print("\n⚠️ Axis scope is empty (A∩B=∅): pass1 is NOT geometrically constrained → forcing NOT STABLE for auditing.")
     ok_final = ok1
 
+    #tier1 = confidence_tier(axes_filtro_1 if usar_filtro_axis else set(), ok1, top2 is not None)
     tier1 = confidence_tier(axes_filtro_1 if usar_filtro_axis else set(), ok1, top2 is not None)
-    print(f"\n📌 Confidence(pass1): {tier1}")
+
+    small_graph = len(G.nodes()) < 30  # umbral simple; ajusta si quieres
+    single_candidate = (top2 is None)
+
+    suffix = ""
+    if small_graph and single_candidate:
+        suffix = " (small graph)"
+
+    print(f"\n📌 Confidence(pass1): {tier1}{suffix}")
+
+    #print(f"\n📌 Confidence(pass1): {tier1}")
     if usar_filtro_axis and not axes_filtro_1:
         print("   (Axis filter empty ⇒ results are NOT geometrically constrained.)")
 
@@ -565,8 +576,22 @@ def main():
 
     #tier_final = confidence_tier(axes_filtro_final if usar_filtro_axis else set(), True, (len(eq_final) > 1))
     #print(f"\n📌 Confidence(final): {tier_final}")
-    tier_final = confidence_tier(axes_filtro_final if usar_filtro_axis else set(),ok_final,(len(eq_final) > 1))
-    print(f"\n📌 Confidence(final): {tier_final}")
+    #tier_final = confidence_tier(axes_filtro_final if usar_filtro_axis else set(),ok_final,(len(eq_final) > 1))
+    #print(f"\n📌 Confidence(final): {tier_final}")
+    tier_final = confidence_tier(
+        axes_filtro_final if usar_filtro_axis else set(),
+        ok_final,
+        (len(eq_final) > 1)
+    )
+    small_graph = len(G.nodes()) < 30
+    single_candidate_final = (len(eq_final) <= 1)
+
+    suffix_final = ""
+    if small_graph and single_candidate_final:
+        suffix_final = " (small graph)"
+
+    print(f"\n📌 Confidence(final): {tier_final}{suffix_final}")
+
 
     # Síntesis con el equilibrio final
     if args.sintesis and eq_final:
