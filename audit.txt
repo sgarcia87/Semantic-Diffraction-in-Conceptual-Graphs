@@ -1,0 +1,280 @@
+📌 Contexto general
+Esta es una prueba como sistema auditor por difracción semántico-estructural.
+Dado un par de polos A y B, calcula:
+Equilibrios (nodos intermedios estables)
+Estabilidad (ratio + balance)
+Drift (contaminación estructural)
+Refine pass (segunda pasada guiada por ejes)
+Síntesis (opcional, a partir del equilibrio final)
+Todo esto usando PageRank personalizado (PPR) sobre una versión filtrada del grafo. 
+
+
+OPCIONES OBLIGATORIAS
+--json PATH
+Ruta al grafo (red_fractal.json).
+
+
+👉 Imprescindible.
+--a NODO
+Polo A del análisis.
+Ejemplo:
+--a "tiempo"
+--b NODO
+Polo B del análisis.
+Ejemplo:
+--b "posición"
+
+
+OPCIONES DE PROPAGACIÓN (cómo se construye el grafo)
+--modo estructura | mixto | todo
+Define qué aristas entran en el cálculo.
+Modo			Qué hace					Cuándo usar
+estructura (default)	❌ Ignora embedding y None			Auditoría geométrica pura
+mixto			✔ Usa estructura + embeddings capados (≤0.2)	Ver si SEM ayuda sin contaminar
+todo			✔ Usa todas las aristas	Exploración libre / debugging
+📌 Si un nodo no aparece en estructura pero sí en mixto, sabes que está solo en SEM.
+
+
+--alpha FLOAT
+Factor de teleport de PageRank (default 0.85).
+Más alto → más global
+Más bajo → más local
+Normalmente no tocar, salvo análisis fino.
+
+
+--lambda_balance FLOAT
+Penaliza el desequilibrio entre polos.
+Fórmula (equilibrio):
+score = (pa + pb) - λ · |pa - pb|
+Valor		Efecto
+bajo (0.3)	favorece popularidad
+alto (0.7+)	exige centro real
+
+
+FILTRO POR EJES (AXIS / ROLES)
+--no_axis
+❌ Desactiva completamente el filtro por ejes.
+👉 Sirve para:
+detectar drift
+comprobar si el resultado depende de roles ⚠️ Produce contaminación (tesis/antítesis/síntesis, etc.).
+
+
+--axis_only "eje:..."
+Fuerza el análisis solo en un eje concreto.
+Ejemplo:
+--axis_only "eje:tiempo:posición__tiempo__velocidad"
+Ideal para:
+auditar un eje
+ver si está “relleno” o vacío 
+comprobar si existe síntesis en ese eje
+⚠️ Debe ser el nombre exacto del eje, no un nodo.
+
+
+--exclude_auto_dualidad
+Excluye ejes generados automáticamente (eje:dualidad_auto:*).
+👉 Úsalo cuando:
+los ejes auto dominan el resultado quieres solo ejes “humanos / descubierta”
+
+
+RESULTADOS Y CANTIDAD
+--top N
+Número de candidatos mostrados (default 12).
+Ejemplo:
+--top 30
+--quiet
+Modo silencioso (oculta prints de ejes y debug).
+Útil para scripts o logs.
+
+
+ESTABILIDAD DEL EQUILIBRIO
+--ratio_min FLOAT
+Mínimo aceptable de:
+score(top1) / score(top2)
+Default: 1.35
+Bajo → muchos empates
+Alto → exige ganador claro
+--balance_max FLOAT
+Máximo desequilibrio permitido:
+|pa - pb| / (pa + pb)
+Default: 0.80
+Ejemplo:
+0.5 → equilibrio muy centrado
+0.8 → equilibrio laxo
+👉 Bajarlo sirve para detectar que un “equilibrio” es en realidad semi-polo.
+
+
+REFINE PASS
+--refine
+Activa segunda pasada automática si el equilibrio NO es estable.
+Qué hace:
+- Encuentra un equilibrio provisional eq0
+- Extrae sus ejes
+- Recalcula el equilibrio filtrando solo por esos ejes
+👉 Sirve para:
+eliminar drift
+resolver casos donde A y B no comparten ejes
+📌 Es una de las opciones más importantes del programa.
+DIAGNÓSTICO DE DRIFT (automático)
+No es una flag, pero aparece en output.
+Muestra nodos que:
+- no comparten ejes con A ni B
+- no son equilibrio/sintesis/emergente
+👉 Señala:
+contaminación estructural nodos meta demasiado conectados
+
+
+SÍNTESIS (OPCIONAL)
+--sintesis
+Activa la búsqueda de síntesis tras el equilibrio final.
+Usa PPR desde:
+A-B-EQ
+Fórmula:
+(pa + pb + pe) - λ · (|pa-pb| + |pa-pe| + |pb-pe|)
+
+
+--reject_sintesis_if_polo
+Rechaza la síntesis si el top1:
+es polo de una relación de dualidad dentro de los ejes considerados
+👉 Evita falsos positivos tipo:
+que un polo vuelva a salir como síntesis
+
+
+RESUMEN
+Objetivo	Flags recomendadas
+Auditoría geométrica pura	--modo estructura --refine
+Ver contaminación SEM		--modo mixto
+Auditar un eje concreto		--axis_only "eje:..."
+Detectar drift			--no_axis
+Exigir centro real		--balance_max 0.5
+Buscar síntesis			--sintesis --refine
+Evitar síntesis falsa		--reject_sintesis_if_polo
+
+
+
+
+EJEMPLOS DE USO:
+1️⃣ ¿Este eje conceptual existe de verdad o es solo SEM?
+(Auditoría estructural pura)
+Pregunta IA_m
+¿“tiempo–posición” está realmente construido en la geometría o solo sugerido por embeddings?
+Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --modo estructura --refine
+
+Qué mirar
+¿Sale un equilibrio único?
+¿Es estable?
+¿Hay más de un candidato o solo “velocidad”?
+Diagnóstico
+✔ Sale equilibrio estable → el eje existe
+❌ No sale nada → eje solo semántico (falta estructura)
+⚠ Sale pero no es estable → eje mal definido o incompleto
+
+
+2️⃣ ¿La red está contaminada por nodos meta?
+(Detección de drift estructural)
+Pregunta IA_m
+¿Conceptos como “síntesis / tesis / antítesis” se cuelan donde no deben?
+Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --no_axis --modo estructura
+
+Qué mirar
+Aparición de nodos genéricos arriba del ranking
+Bloque 🧯 DRIFT suspects
+Diagnóstico
+Si aparecen → obligatorio usar filtro por ejes
+Sirve para detectar sumideros conceptuales en la red
+👉 Este test no es para obtener equilibrio, es para ver qué pasaría sin control.
+
+
+3️⃣ ¿Un eje está “relleno” o vacío?
+(Radiografía de un eje concreto)
+Pregunta IA_m
+¿El eje “posición–tiempo–velocidad” contiene más que un solo nodo?
+Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --axis_only "eje:tiempo:posición__tiempo__velocidad" --modo estructura --top 30
+
+Qué mirar
+Número de candidatos
+Diversidad de tipos (equilibrio, concepto, etc.)
+Diagnóstico
+Solo “velocidad” → eje subpoblado
+Aparecen “movimiento”, “trayectoria”… → eje sano
+👉 Ideal para decidir qué conceptos faltan añadir.
+
+
+4️⃣ ¿La síntesis existe realmente en estructura?
+(Síntesis fuerte, no semántica)
+Pregunta IA_m
+¿Existe una síntesis estructural real o solo una intuición conceptual?
+Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo estructura
+
+Qué mirar
+¿Aparece síntesis?
+¿Es distinta de polos y equilibrio?
+¿Comparte ejes con EQ?
+Diagnóstico
+❌ No aparece → falta el concepto puente
+✔ Aparece pero es polo → síntesis falsa
+✔ Aparece coherente → estructura completa
+
+
+5️⃣ ¿La síntesis solo existe en SEM?
+(Comparativa estructura vs semántica)
+Pregunta IA_m
+¿Este concepto emergente está “entendido” pero no “construido”?
+Comandos:
+# estructura
+python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo estructura
+# mixto
+python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --sintesis --refine --modo mixto
+
+Diagnóstico
+Sale solo en mixto → promocionar a estructura
+No sale en ninguno → concepto inexistente
+Sale en ambos → estructura sólida
+👉 Este test decide qué edges SEM deben “cristalizar”.
+
+
+6️⃣ ¿El equilibrio es realmente central o está sesgado?
+(Auditoría fina de equilibrio)
+Pregunta IA_m
+¿Este equilibrio está realmente entre A y B o es casi un polo?
+Comando: python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --balance_max 0.5 --refine --modo estructura
+
+Qué mirar
+Si deja de ser estable al bajar balance_max
+Diagnóstico
+Deja de ser estable → equilibrio “débil”
+Sigue estable → centro fuerte
+👉 Muy útil para jerarquizar equilibrios.
+
+
+7️⃣ ¿El refine pass está salvando el análisis?
+(Ejes implícitos vs explícitos)
+Pregunta IA_m
+¿A y B no comparten ejes, pero el sistema puede reconstruir uno?
+Comando: python3 test5.py --json json/red_fractal.json --a "concepto_A" --b "concepto_B" --refine --modo estructura
+
+Qué mirar
+Diferencia entre pass1 y pass2
+Cambio de ejes en refine
+Diagnóstico
+Pass2 mejora → estructura latente correcta
+Pass2 no mejora → red mal conectada
+
+
+8️⃣ Auditoría / post-entrenamiento (rutina real)
+Después de 24–48h de expansión automática:
+Checklist mínimo
+# 1. Pares críticos
+python3 test5.py --json json/red_fractal.json --a "tiempo" --b "espacio" --refine --modo estructura
+python3 test5.py --json json/red_fractal.json --a "frío" --b "calor" --sintesis --refine --modo estructura
+# 2. Drift global
+python3 test5.py --json json/red_fractal.json --a "tiempo" --b "posición" --no_axis --modo estructura
+👉 Si esto pasa limpio, IA_m está sana.
+
+🧠 Resumen conceptual (IA_m)
+estructura = geometría del significado
+mixto = intuición semántica
+refine = atención consciente
+axis_only = foco
+no_axis = inconsciente
+sintesis = emergencia
+balance/ratio = estabilidad ontológica
