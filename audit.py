@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# networkx>=2.8,<3.0
 
 """
 Difracción v5 (refine pass) para IA_m
@@ -22,6 +23,7 @@ Ejemplos:
 """
 
 import json
+import sys
 import argparse
 import networkx as nx
 
@@ -37,9 +39,14 @@ EXCLUIR_NODOS_DEFAULT = {
 # -------------------------
 
 def cargar_red(path: str) -> nx.DiGraph:
+    # networkx compatibility: most versions use link="links"
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
-    G = nx.node_link_graph(data, edges="links")
+    try:
+        G = nx.node_link_graph(data, link="links")
+    except TypeError:
+        # fallback for older signatures
+        G = nx.node_link_graph(data)
     if not isinstance(G, nx.DiGraph):
         G = nx.DiGraph(G)
     return G
@@ -341,9 +348,28 @@ def imprimir_top_equilibrio(eq_list, top=12):
         print(f"{i:02d}. {n:30s}  score={s:.6f}  pa={va:.6f}  pb={vb:.6f}  tipo={t}{ax_info}")
 
 
-def imprimir_estabilidad(label, top1, top2, ratio_min, balance_max):
+def imprimir_estabilidad(label, top1, top2, ratio_min, balance_max, *, axis_scope_empty=False):
     ok, razones, stats = estabilidad_equilibrio(top1, top2, ratio_min=ratio_min, balance_max=balance_max)
+
     print(f"\n🧪 Estabilidad del equilibrio ({label}):")
+
+    # Scientific reporting: if axis scope is empty, do NOT claim "stable" as an audit result.
+    if axis_scope_empty:
+        # We still report the numeric stats, but explicitly mark as unconstrained.
+        status = "UNCONSTRAINED"
+        if ok:
+            status += " (would-be stable)"
+        print(f"⚠️ {status} | axis_scope=A∩B=∅ | balance={stats.get('balance',0):.2f}  ratio={stats.get('ratio','n/a')}")
+        if ok:
+            print("   (Result may be driven by global topology/hubs because axis filtering did not apply.)")
+        return ok, razones, stats
+
+    # If there is no top2, ratio cannot be computed → stability is indeterminate in a strict sense.
+    if ok and (top2 is None):
+        print(f"🟡 INDETERMINATE | only one candidate (no top2) | balance={stats.get('balance',0):.2f}  ratio=n/a")
+        print("   (Consider requiring min candidates or using a larger graph/sample for stronger evidence.)")
+        return ok, razones, stats
+
     if ok:
         print(f"✅ ESTABLE  | balance={stats.get('balance',0):.2f}  ratio={stats.get('ratio','n/a')}")
     else:
@@ -351,8 +377,22 @@ def imprimir_estabilidad(label, top1, top2, ratio_min, balance_max):
     return ok, razones, stats
 
 
+def confidence_tier(axes_filtro, ok_estable, top2_exists):
+    """
+    Simple confidence tiers to prevent false 'stable' calls:
+    - LOW if no axis constraint (axes_filtro empty) OR only one candidate (no top2)
+    - MED if axis constrained but stability indeterminate
+    - HIGH if axis constrained AND stable AND has top2 comparison
+    """
+    if not axes_filtro:
+        return "LOW"
+    if not top2_exists:
+        return "MED"
+    return "HIGH" if ok_estable else "MED"
+
+
 def main():
-    ap = argparse.ArgumentParser(description="Test difracción v5 (refine pass)")
+    ap = argparse.ArgumentParser(description="Semantic Diffraction Auditor")
     ap.add_argument("--json", required=True)
     ap.add_argument("--a", required=True)
     ap.add_argument("--b", required=True)
@@ -368,6 +408,9 @@ def main():
     ap.add_argument("--balance_max", type=float, default=0.80)
     ap.add_argument("--reject_sintesis_if_polo", action="store_true")
     ap.add_argument("--refine", action="store_true", help="Activa refine pass si equilibrio NO estable")
+    ap.add_argument("--strict_axis", action="store_true", help="Si A∩B es vacío, aborta (NO AUDITABLE) salvo que refine produzca ejes válidos.")
+     
+    
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
 
@@ -399,6 +442,11 @@ def main():
             print("⚠️ Filtro AXIS activo pero vacío (pass1): no filtra por ejes.\n")
         else:
             print("ℹ️ Filtro AXIS desactivado (pass1).\n")
+    # If user expects axis filtering but A∩B is empty, do not pretend it's audited.
+    if args.strict_axis and usar_filtro_axis and not axes_filtro_1 and not args.refine:
+        print("🚫 NO AUDITABLE: A∩B axis intersection is empty and --refine is off. Use --refine or disable --strict_axis.")
+        sys.exit(2)
+
 
     eq1 = buscar_equilibrios(
         G, a, b,
@@ -415,7 +463,22 @@ def main():
 
     top1 = eq1[0] if len(eq1) else None
     top2 = eq1[1] if len(eq1) > 1 else None
-    ok1, _, _ = imprimir_estabilidad("pass1", top1, top2, args.ratio_min, args.balance_max)
+    #ok1, _, _ = imprimir_estabilidad("pass1", top1, top2, args.ratio_min, args.balance_max)
+    axis_empty_1 = (usar_filtro_axis and not axes_filtro_1)
+    ok1, _, _ = imprimir_estabilidad(
+        "pass1", top1, top2, args.ratio_min, args.balance_max,
+        axis_scope_empty=axis_empty_1
+    )
+    #if usar_filtro_axis and not axes_filtro_1:
+    #    ok1 = False
+    #    print("\n⚠️ Axis scope is empty (A∩B=∅): pass1 is NOT geometrically constrained → forcing NOT STABLE for auditing.")
+    ok_final = ok1
+
+    tier1 = confidence_tier(axes_filtro_1 if usar_filtro_axis else set(), ok1, top2 is not None)
+    print(f"\n📌 Confidence(pass1): {tier1}")
+    if usar_filtro_axis and not axes_filtro_1:
+        print("   (Axis filter empty ⇒ results are NOT geometrically constrained.)")
+
 
     # Drift suspects pass1
     sospechosos1 = diagnostico_drift(
@@ -429,44 +492,81 @@ def main():
     # Refine pass
     eq_final = eq1
     axes_filtro_final = axes_filtro_1
+
     if args.refine and (not ok1) and top1 is not None:
         eq0 = top1[0]
-        axes_filtro_2 = familia_axes_desde_eq(
-            G, a, b, eq0,
-            axis_only=args.axis_only,
-            exclude_auto_dualidad=args.exclude_auto_dualidad
-        )
 
-        print(f"\n🧹 REFINE PASS activado: recalculando equilibrio filtrando por ejes de eq0='{eq0}'")
-        if debug:
-            print(f"🧭 AXIS filtro equilibrio (pass2 desde eq0): {sorted(list(axes_filtro_2))[:10]}{' ...' if len(axes_filtro_2)>10 else ''}")
+        axes_eq0 = normalize_axis_set(axes_de_nodo(G, eq0), args.exclude_auto_dualidad)
+        axes_a0  = normalize_axis_set(axes_de_nodo(G, a),  args.exclude_auto_dualidad)
+        axes_b0  = normalize_axis_set(axes_de_nodo(G, b),  args.exclude_auto_dualidad)
 
-        eq2 = buscar_equilibrios(
-            G, a, b,
-            alpha=args.alpha,
-            modo=args.modo,
-            lambda_balance=args.lambda_balance,
-            usar_filtro_axis=True,          # en refine, forzamos filtro
-            axes_filtro=axes_filtro_2,
-            exclude_auto_dualidad=args.exclude_auto_dualidad,
-            top_k=max(40, args.top),
-        )
+        shares_a = bool(axes_eq0 & axes_a0)
+        shares_b = bool(axes_eq0 & axes_b0)
 
-        print("\n⚖️ Top candidatos a EQUILIBRIO (pass2 refinado):")
-        if not eq2:
-            print("   (pass2 sin resultados; mantengo pass1)")
-        else:
-            imprimir_top_equilibrio(eq2, top=args.top)
-            top1b = eq2[0] if len(eq2) else None
-            top2b = eq2[1] if len(eq2) > 1 else None
-            ok2, _, _ = imprimir_estabilidad("pass2", top1b, top2b, args.ratio_min, args.balance_max)
+        bal0 = abs(top1[2] - top1[3]) / max(1e-12, (top1[2] + top1[3]))
 
-            if ok2:
-                print("✅ Se adopta pass2 como resultado final.")
-                eq_final = eq2
-                axes_filtro_final = axes_filtro_2
+        allow_refine = True
+        if not (shares_a and shares_b):
+            print(f"\n🛑 REFINE SKIPPED: eq0='{eq0}' does not share axes with BOTH poles (shares_a={shares_a}, shares_b={shares_b}).")
+            allow_refine = False
+
+        if bal0 > min(0.95, args.balance_max + 0.15):
+            print(f"\n🛑 REFINE SKIPPED: provisional eq0='{eq0}' is too imbalanced (balance={bal0:.2f}).")
+            allow_refine = False
+
+        if allow_refine:
+            axes_filtro_2 = familia_axes_desde_eq(
+                G, a, b, eq0,
+                axis_only=args.axis_only,
+                exclude_auto_dualidad=args.exclude_auto_dualidad
+            )
+
+            print(f"\n🧹 REFINE PASS activado: recalculando equilibrio filtrando por ejes de eq0='{eq0}'")
+            if debug:
+                print(f"🧭 AXIS filtro equilibrio (pass2 desde eq0): {sorted(list(axes_filtro_2))[:10]}{' ...' if len(axes_filtro_2)>10 else ''}")
+
+            eq2 = buscar_equilibrios(
+                G, a, b,
+                alpha=args.alpha,
+                modo=args.modo,
+                lambda_balance=args.lambda_balance,
+                usar_filtro_axis=True,          # en refine, forzamos filtro
+                axes_filtro=axes_filtro_2,
+                exclude_auto_dualidad=args.exclude_auto_dualidad,
+                top_k=max(40, args.top),
+            )
+
+            print("\n⚖️ Top candidatos a EQUILIBRIO (pass2 refinado):")
+            if not eq2:
+                print("   (pass2 sin resultados; mantengo pass1)")
             else:
-                print("⚠️ pass2 no mejora suficiente; mantengo pass1.")
+                imprimir_top_equilibrio(eq2, top=args.top)
+                top1b = eq2[0] if len(eq2) else None
+                top2b = eq2[1] if len(eq2) > 1 else None
+
+                axis_empty_2 = (not axes_filtro_2)
+                ok2, _, _ = imprimir_estabilidad(
+                    "pass2", top1b, top2b, args.ratio_min, args.balance_max,
+                    axis_scope_empty=axis_empty_2
+                )
+
+                if ok2:
+                    print("✅ Se adopta pass2 como resultado final.")
+                    eq_final = eq2
+                    axes_filtro_final = axes_filtro_2
+                    ok_final = ok2
+                else:
+                    print("⚠️ pass2 no mejora suficiente; mantengo pass1.")
+
+    # If strict axis is on, enforce that final result is axis-constrained.
+    if args.strict_axis and usar_filtro_axis and not axes_filtro_final:
+        print("\n🚫 NO AUDITABLE: could not obtain a non-empty axis scope (pass1 empty and refine did not validate axes).")
+        sys.exit(3)
+
+    #tier_final = confidence_tier(axes_filtro_final if usar_filtro_axis else set(), True, (len(eq_final) > 1))
+    #print(f"\n📌 Confidence(final): {tier_final}")
+    tier_final = confidence_tier(axes_filtro_final if usar_filtro_axis else set(),ok_final,(len(eq_final) > 1))
+    print(f"\n📌 Confidence(final): {tier_final}")
 
     # Síntesis con el equilibrio final
     if args.sintesis and eq_final:
