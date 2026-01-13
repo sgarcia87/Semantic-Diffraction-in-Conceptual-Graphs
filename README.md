@@ -133,6 +133,51 @@ Both datasets are automatically extracted from a larger IA_m graph using the sam
 The example datasets are currently in Spanish, as they originate from an evolving conceptual graph developed in that language. The auditing method itself is language-agnostic, and English datasets will be added in future iterations.
 If A∩B is empty, results are reported as UNCONSTRAINED (LOW confidence). Use --strict_axis to enforce auditability.
 
+Reproducibility EXAMPLES
+This repository includes two curated datasets (demo and sample) that allow direct verification of the auditor’s behavior.
+All commands below are copy–paste reproducible.
+Demo graph (minimal, canonical)
+python3 audit.py --json data/red_fractal_demo.json --a "frío" --b "calor" --sintesis --modo estructura
+Expected result:
+Equilibrium: tibio
+Synthesis: temperatura
+Stability: INDETERMINATE (single candidate, small graph)
+python3 audit.py --json data/red_fractal_demo.json --a "espacio" --b "tiempo" --modo estructura
+Expected result:
+Equilibrium: relatividad
+Stability: INDETERMINATE (single candidate, small graph)
+Sample graph (stress test, realistic structure)
+python3 audit.py --json data/red_fractal_sample.json \
+  --a "frío" --b "calor" --sintesis --modo estructura
+Expected result:
+Equilibrium: tibio
+Synthesis: temperatura
+Axis-constrained, stable behavior
+python3 audit.py --json data/red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
+Expected result:
+Equilibrium: relatividad
+Axis-constrained behavior
+Adversarial case (no shared axes)
+python3 audit.py --json data/red_fractal_sample.json --a "espacio" --b "calor" --refine --modo estructura
+Expected result:
+Axis scope empty (A ∩ B = ∅)
+Result marked as UNCONSTRAINED
+Confidence: LOW
+Refine pass is automatically skipped (no auto-confirmation)
+Strict audit mode (enforced auditability)
+python3 audit.py --strict_axis --json data/red_fractal_sample.json --a "espacio" --b "calor" --modo estructura
+Expected result:
+Execution aborts with NO AUDITABLE (exit code 2)
+python3 audit.py --strict_axis --refine --json data/red_fractal_sample.json --a "espacio" --b "calor" --modo estructura
+Expected result:
+Refine attempted
+No valid axis scope recovered
+Execution aborts with NO AUDITABLE (exit code 3)
+Notes on reproducibility
+All results above use structure-only propagation (--modo estructura).
+When no shared axes exist, results are explicitly reported as UNCONSTRAINED with LOW confidence.
+The --strict_axis flag enforces formal auditability and prevents unconstrained equilibria from being reported as valid.
+
 📦 License
 Apache License 2.0
 Chosen to encourage open research, reproducibility, and safe industrial adoption while protecting authorship and patent rights.
