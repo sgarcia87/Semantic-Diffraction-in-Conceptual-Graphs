@@ -109,8 +109,8 @@ This repository includes two curated datasets that allow direct verification of 
 
 Demo graph (minimal, canonical)
 The demo graph is a compact, noise-free semantic graph designed to showcase the core capabilities of the auditor: equilibrium detection and synthesis emergence under strict structural constraints.
-python3 test5.py --json data/red_fractal_demo.json --a "frío" --b "calor" --sintesis --modo estructura
-python3 test5.py --json data/red_fractal_demo.json --a "espacio" --b "tiempo" --modo estructura
+python3 audit.py --json red_fractal_demo.json --a "frío" --b "calor" --sintesis --modo estructura
+python3 audit.py --json red_fractal_demo.json --a "espacio" --b "tiempo" --modo estructura
 Expected behavior:
 frío / calor → equilibrium tibio → synthesis temperatura
 espacio / tiempo → stable equilibrium relatividad
@@ -118,8 +118,8 @@ espacio / tiempo → stable equilibrium relatividad
 
 Sample graph (stress-test, realistic structure)
 The sample graph contains multiple interacting axes, mild structural noise, and non-trivial topology. It is intended to validate stability criteria, axis filtering, and robustness beyond the minimal demo.
-python3 audit.py --json data/red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
-python3 audit.py --json data/red_fractal_sample.json --a "frío" --b "calor" --sintesis --modo estructura
+python3 audit.py --json red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
+python3 audit.py --json red_fractal_sample.json --a "frío" --b "calor" --sintesis --modo estructura
 Expected behavior:
 Stable equilibrium relatividad for espacio / tiempo
 Stable equilibrium tibio and synthesis temperatura for frío / calor
@@ -137,38 +137,38 @@ Reproducibility EXAMPLES
 This repository includes two curated datasets (demo and sample) that allow direct verification of the auditor’s behavior.
 All commands below are copy–paste reproducible.
 Demo graph (minimal, canonical)
-python3 audit.py --json data/red_fractal_demo.json --a "frío" --b "calor" --sintesis --modo estructura
+python3 audit.py --json red_fractal_demo.json --a "frío" --b "calor" --sintesis --modo estructura
 Expected result:
 Equilibrium: tibio
 Synthesis: temperatura
 Stability: INDETERMINATE (single candidate, small graph)
-python3 audit.py --json data/red_fractal_demo.json --a "espacio" --b "tiempo" --modo estructura
+python3 audit.py --json red_fractal_demo.json --a "espacio" --b "tiempo" --modo estructura
 Expected result:
 Equilibrium: relatividad
 Stability: INDETERMINATE (single candidate, small graph)
 Sample graph (stress test, realistic structure)
-python3 audit.py --json data/red_fractal_sample.json \
+python3 audit.py --json red_fractal_sample.json \
   --a "frío" --b "calor" --sintesis --modo estructura
 Expected result:
 Equilibrium: tibio
 Synthesis: temperatura
 Axis-constrained, stable behavior
-python3 audit.py --json data/red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
+python3 audit.py --json red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
 Expected result:
 Equilibrium: relatividad
 Axis-constrained behavior
 Adversarial case (no shared axes)
-python3 audit.py --json data/red_fractal_sample.json --a "espacio" --b "calor" --refine --modo estructura
+python3 audit.py --json red_fractal_sample.json --a "espacio" --b "calor" --refine --modo estructura
 Expected result:
 Axis scope empty (A ∩ B = ∅)
 Result marked as UNCONSTRAINED
 Confidence: LOW
 Refine pass is automatically skipped (no auto-confirmation)
 Strict audit mode (enforced auditability)
-python3 audit.py --strict_axis --json data/red_fractal_sample.json --a "espacio" --b "calor" --modo estructura
+python3 audit.py --strict_axis --json red_fractal_sample.json --a "espacio" --b "calor" --modo estructura
 Expected result:
 Execution aborts with NO AUDITABLE (exit code 2)
-python3 audit.py --strict_axis --refine --json data/red_fractal_sample.json --a "espacio" --b "calor" --modo estructura
+python3 audit.py --strict_axis --refine --json red_fractal_sample.json --a "espacio" --b "calor" --modo estructura
 Expected result:
 Refine attempted
 No valid axis scope recovered
