@@ -1,189 +1,181 @@
-# Semantic-Diffraction-in-Conceptual-Graphs
-A Structural Approach to Equilibrium and Synthesis Detection. Semantic graph auditor based on Personalized PageRank (PPR) for IA_m. Analyzes concept pairs to detect structural equilibria, stability (ratio/balance), drift, and emergent synthesis using axis-based role filtering, structure/mixed modes, and an axis-guided refine pass.
+Semantic Diffraction in Conceptual Graphs -» A Structural Approach to Equilibrium and Synthesis Detection
 
+Semantic graph auditor based on Personalized PageRank (PPR) for IA_m and general semantic graphs.
 
-IA_m – Diffraction Auditor (v5)
-IA_m Diffraction Auditor is a structural auditing tool for semantic graphs.
-It analyzes pairs of concepts to determine whether their relationship is geometrically and structurally coherent, or merely the result of semantic proximity (embeddings).
-The tool is designed as a quality-control and diagnostic layer for IA_m, but it can be applied to any directed semantic graph enriched with roles/axes metadata.
+This repository implements a structural auditing framework for semantic graphs.
+Given a pair of conceptual poles, the auditor determines whether an apparent equilibrium or synthesis is structurally coherent, stable, and axis-consistent, or merely an artifact of semantic proximity (e.g. embeddings or global popularity).
+The system is designed as a quality-control and diagnostic layer for IA_m, but can be applied to any directed semantic graph enriched with axis / role metadata.
 
 🧩 The Problem It Solves
-Large semantic graphs (LLM-generated, hybrid symbolic–embedding systems, knowledge graphs, etc.) tend to suffer from the same issues:
-False equilibria
-Nodes appear “central” because they are globally popular, not because they structurally mediate two concepts.
-Semantic drift
-Meta-concepts (e.g. synthesis, thesis, definition) dominate rankings and contaminate domain-specific reasoning.
-Missing structure
-A relationship feels correct semantically, but the graph lacks explicit intermediate concepts or axes.
-No stability criteria
+Large semantic graphs (LLM-generated, hybrid symbolic–embedding systems, knowledge graphs, etc.) systematically suffer from:
+- False equilibria: Nodes appear “central” because they are globally popular hubs, not because they structurally mediate two concepts.
+- Semantic drift:  Meta-concepts (e.g. definition, synthesis, concept) dominate rankings and contaminate domain-specific reasoning.
+- Missing structure: A relationship feels correct semantically, but the graph lacks explicit intermediate concepts or axes.
+- No stability criteria: Most systems rank nodes, but do not answer the key question:
+  Is this equilibrium robust, or accidental?
 
-Most systems rank nodes, but do not answer:
-Is this equilibrium actually stable, or is it an accident?
 IA_m Diffraction Auditor addresses these problems explicitly.
 
 🧠 Core Idea
-The auditor treats concept pairs as interfering sources in a semantic field.
-Instead of asking “what is close to A and B?”, it asks:
-What node structurally balances A and B under controlled propagation and axis constraints?
-This is achieved through:
-Personalized PageRank (PPR) propagation
-Axis-based filtering (roles / conceptual dimensions)
-Balance and dominance metrics
-A second-pass refinement guided by the candidate equilibrium itself
+The auditor treats a pair of concepts as interfering sources in a semantic field.
 
-⚙️ How It Works 
-1. Controlled Propagation
+Instead of asking:
+“What is close to A and B?”
+
+it asks:
+“What node structurally balances A and B under controlled propagation and axis constraints?”
+
+This is achieved through:
+- Personalized PageRank (PPR) propagation
+- Axis / role-based filtering (conceptual dimensions)
+- Balance and dominance metrics
+- A second-pass refinement guided by the candidate equilibrium itself
+
+⚙️ Formal Core: Semantic Diffraction Score
+Given a directed graph 𝐺 = (𝑉,𝐸)  and two conceptual poles A and B:
+1. Compute two independent Personalized PageRank fields:
+    𝑃𝐴(𝑛) : PPR centered on A
+    𝑃𝐵(𝑛) : PPR centered on B
+
+Define the semantic diffraction score:
+S(n)=(PA(n)+PB(n))−λ⋅∣PA(n)−PB(n)∣
+
+Where:
+- 𝑃𝐴,𝑃𝐵 represent structural intensity from each pole
+- The sum favors shared influence
+- The absolute difference penalizes asymmetry
+- λ≥0 controls stability strictness
+
+Nodes maximizing 
+S(n) under structural constraints are equilibrium candidates.
+This formulation favors true mediators, not global hubs.
+
+
+⚙️ How It Works
+1️⃣ Controlled Propagation
 The graph is rebuilt in one of three modes:
-structure: only explicit structural edges
-mixed: structure + capped embeddings
-all: full graph (exploratory)
+- structure — only explicit structural edges
+- mixed — structure + capped embeddings
+- all — full graph (exploratory / diagnostic)
 PPR is computed independently from pole A and pole B.
 
-2. Interference Scoring (Equilibrium Detection)
-Each candidate node is scored as:
+2️⃣ Interference Scoring (Equilibrium Detection)
+Each candidate node is scored using the diffraction formula above:
 score = (pa + pb) − λ · |pa − pb|
-Where:
-pa, pb are PPR probabilities from A and B
-λ penalizes imbalance
-This favors true mediators, not hubs.
+This directly penalizes imbalance and suppresses hub dominance.
 
-3. Axis / Role Filtering
+3️⃣ Axis / Role Filtering
 Candidates can be restricted to:
-shared axes of A and B
-a specific axis (--axis_only)
-or no axes at all (stress test)
-This allows strict geometric audits or free exploration.
+- axes shared by A and B
+- a specific axis (--axis_only)
+- no axis filtering at all (stress test)
+This allows both strict geometric audits and controlled free exploration.
 
-4. Stability Analysis
+4️⃣ Stability Analysis
 An equilibrium is considered stable only if:
-it dominates the runner-up (ratio test)
-it is sufficiently balanced between poles
-This answers:
+- it dominates the runner-up (ratio test)
+- it is sufficiently balanced between poles
+This answers explicitly:
 Is this equilibrium robust, or ambiguous?
 
-
-5. Refine Pass (v5)
-If the equilibrium is unstable, a second pass is triggered:
-Extract axes from the provisional equilibrium
-Re-run the search constrained to those axes
+5️⃣ Axis-Guided Refine Pass (v5)
+If the top equilibrium is unstable, a second pass is triggered:
+- Extract axes from the provisional equilibrium
+- Re-run propagation constrained to those axes
 This often recovers latent structure when poles do not initially share axes.
 
-6. Drift Diagnostics
+6️⃣ Drift Diagnostics
 The auditor explicitly reports drift suspects:
-nodes with no shared axes with poles
-non-structural concepts acting as attractors
-This makes contamination visible instead of silent.
+- nodes with no shared axes with the poles
+- non-structural or meta-concept attractors
+Contamination is made visible, not silent.
 
-7. Optional Synthesis Detection
+7️⃣ Optional Synthesis Detection
 Given:
-pole A
-pole B
-final equilibrium EQ
+- pole A
+- pole B
+- final equilibrium EQ
 The auditor can search for a higher-order synthesis using triple-source PPR and balance constraints.
 False syntheses (e.g. poles of dualities) can be rejected automatically.
 
 ✅ What This Tool Is Good For
-Auditing semantic graph health
-Detecting missing intermediate concepts
-Validating conceptual axes (e.g. time–space, hot–cold)
-Preventing meta-concept contamination
-Comparing structure vs embedding intuition
-Post-training QA for autonomous graph expansion systems
+- Auditing semantic graph health
+- Detecting missing intermediate concepts
+- Validating conceptual axes (e.g. time–space, hot–cold)
+- Preventing meta-concept contamination
+- Comparing structure vs embedding intuition
+- Post-training QA for autonomous graph expansion systems
 
 ❌ What This Tool Is Not
-Not a general-purpose recommender
-Not a replacement for embeddings
-Not a learning algorithm
+- Not a general-purpose recommender
+- Not a replacement for embeddings
+- Not a learning algorithm
 It is an auditor, not a generator.
 
 🔬 Typical Use Cases
-Knowledge graph validation
-Research prototypes combining symbolic + neural representations
-Conceptual geometry / philosophy of AI experiments
-Structural sanity checks after long autonomous expansions
+- Knowledge graph validation
+- Research prototypes combining symbolic + neural representations
+- Conceptual geometry / philosophy of AI experiments
+- Structural sanity checks after long autonomous expansions
 
+🔁 Reproducibility
+This repository includes two curated datasets allowing direct verification under controlled conditions.
 
-#############################################################################
-Reproducibility
-This repository includes two curated datasets that allow direct verification of the auditor’s behavior under controlled conditions.
-
-Demo graph (minimal, canonical)
-The demo graph is a compact, noise-free semantic graph designed to showcase the core capabilities of the auditor: equilibrium detection and synthesis emergence under strict structural constraints.
+Demo Graph (minimal, canonical)
 python3 audit.py --json red_fractal_demo.json --a "frío" --b "calor" --sintesis --modo estructura
+Expected behavior:
+- frío / calor → equilibrium tibio
+- synthesis → temperatura
+
 python3 audit.py --json red_fractal_demo.json --a "espacio" --b "tiempo" --modo estructura
 Expected behavior:
-frío / calor → equilibrium tibio → synthesis temperatura
-espacio / tiempo → stable equilibrium relatividad
+- stable equilibrium → relatividad
 
-
-Sample graph (stress-test, realistic structure)
-The sample graph contains multiple interacting axes, mild structural noise, and non-trivial topology. It is intended to validate stability criteria, axis filtering, and robustness beyond the minimal demo.
-python3 audit.py --json red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
+Sample Graph (stress test, realistic structure)
 python3 audit.py --json red_fractal_sample.json --a "frío" --b "calor" --sintesis --modo estructura
 Expected behavior:
-Stable equilibrium relatividad for espacio / tiempo
-Stable equilibrium tibio and synthesis temperatura for frío / calor
-Axis-based filtering active
-No meta-concept drift under structural mode
+- stable equilibrium → tibio
+- synthesis → temperatura
+- axis-constrained behavior
+- no meta-concept drift
 
-Notes on reproducibility
-All results are obtained using structure-only propagation (no embeddings).
-Axis/role metadata is essential for reproducibility.
-Both datasets are automatically extracted from a larger IA_m graph using the same auditing logic provided in this repository.
-The example datasets are currently in Spanish, as they originate from an evolving conceptual graph developed in that language. The auditing method itself is language-agnostic, and English datasets will be added in future iterations.
-If A∩B is empty, results are reported as UNCONSTRAINED (LOW confidence). Use --strict_axis to enforce auditability.
-
-Reproducibility EXAMPLES
-This repository includes two curated datasets (demo and sample) that allow direct verification of the auditor’s behavior.
-All commands below are copy–paste reproducible.
-Demo graph (minimal, canonical)
-python3 audit.py --json red_fractal_demo.json --a "frío" --b "calor" --sintesis --modo estructura
-Expected result:
-Equilibrium: tibio
-Synthesis: temperatura
-Stability: INDETERMINATE (single candidate, small graph)
-python3 audit.py --json red_fractal_demo.json --a "espacio" --b "tiempo" --modo estructura
-Expected result:
-Equilibrium: relatividad
-Stability: INDETERMINATE (single candidate, small graph)
-Sample graph (stress test, realistic structure)
-python3 audit.py --json red_fractal_sample.json \
-  --a "frío" --b "calor" --sintesis --modo estructura
-Expected result:
-Equilibrium: tibio
-Synthesis: temperatura
-Axis-constrained, stable behavior
 python3 audit.py --json red_fractal_sample.json --a "espacio" --b "tiempo" --modo estructura
-Expected result:
-Equilibrium: relatividad
-Axis-constrained behavior
-Adversarial case (no shared axes)
+Expected behavior:
+- stable equilibrium → relatividad
+- Adversarial / Non-Auditable Cases
+
 python3 audit.py --json red_fractal_sample.json --a "espacio" --b "calor" --refine --modo estructura
 Expected result:
-Axis scope empty (A ∩ B = ∅)
-Result marked as UNCONSTRAINED
-Confidence: LOW
-Refine pass is automatically skipped (no auto-confirmation)
-Strict audit mode (enforced auditability)
-python3 audit.py --strict_axis --json red_fractal_sample.json --a "espacio" --b "calor" --modo estructura
-Expected result:
-Execution aborts with NO AUDITABLE (exit code 2)
-python3 audit.py --strict_axis --refine --json red_fractal_sample.json --a "espacio" --b "calor" --modo estructura
-Expected result:
-Refine attempted
-No valid axis scope recovered
-Execution aborts with NO AUDITABLE (exit code 3)
-Notes on reproducibility
-All results above use structure-only propagation (--modo estructura).
-When no shared axes exist, results are explicitly reported as UNCONSTRAINED with LOW confidence.
-The --strict_axis flag enforces formal auditability and prevents unconstrained equilibria from being reported as valid.
+- A ∩ B = ∅
+- Result marked UNCONSTRAINED
+- Confidence: LOW
 
-### Exclusion policy (important)
-By default, the auditor excludes only internal/meta nodes (e.g., `ia_m`, `subconsciente`) to prevent trivial hubs.
-Skeleton nodes such as spatial directions (`izquierda`, `derecha`, …), temporal primitives (`pasado`, `presente`, `futuro`) and `centro focal` are **NOT** excluded by default because they are valid equilibria in canonical axis tests.
-To suppress these skeleton nodes, enable:
+python3 audit.py --strict_axis --json red_fractal_sample.json --a "espacio" --b "calor"
+Expected result:
+- Execution aborts with NO AUDITABLE (exit code 2)
+
+🧪 Notes on Reproducibility
+- All examples use structure-only propagation (--modo estructura)
+- Axis / role metadata is essential
+- If A ∩ B is empty, results are reported as UNCONSTRAINED (LOW confidence)
+- --strict_axis enforces formal auditability
+The example datasets are currently in Spanish, as they originate from an evolving IA_m graph.
+The method itself is language-agnostic.
+
+🚫 Exclusion Policy (Important)
+By default, only internal/meta nodes are excluded (e.g. ia_m, subconsciente).
+Skeleton nodes (spatial directions, temporal primitives, centro focal) are not excluded by default, as they are valid equilibria in canonical axis tests.
+To suppress them:
 python3 audit.py --exclude_skeleton ...
 
 📦 License
 Apache License 2.0
 Chosen to encourage open research, reproducibility, and safe industrial adoption while protecting authorship and patent rights.
+
+📌 Terminology Mapping (Paper ↔ Code)
+Paperconcept	                              Code
+Semantic diffraction score	`               (pa + pb) − λ·
+Equilibrium candidate	                      eq
+Axis-guided refinement	                    --refine
+Structural propagation	                    PPR (non-embedding edges)
+Drift	                                      drift_suspects
