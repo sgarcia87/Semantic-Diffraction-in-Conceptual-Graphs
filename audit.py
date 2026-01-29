@@ -296,6 +296,8 @@ def buscar_equilibrios(
 
         va = float(pa.get(n, 0.0))
         vb = float(pb.get(n, 0.0))
+        # Semantic Diffraction Score:
+        # S(v) = (P_A(v) + P_B(v)) - λ · |P_A(v) - P_B(v)|
         score = (va + vb) - lambda_balance * abs(va - vb)
         results.append((n, score, va, vb, t, shared_axes))
 
